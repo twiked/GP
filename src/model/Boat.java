@@ -12,10 +12,41 @@ public class Boat implements Serializable {
 	private int serialNum;
 	private String insurance;
 	
+	private Model boatModel;
+	private Owner boatOwner;
+	private Dock boatDock;
+	
+	
+	
+	public Model getBoatModel() {
+		return boatModel;
+	}
+
+	public void setBoatModel(Model boatModel) {
+		this.boatModel = boatModel;
+	}
+
+	public Owner getBoatOwner() {
+		return boatOwner;
+	}
+
+	public void setBoatOwner(Owner boatOwner) {
+		this.boatOwner = boatOwner;
+	}
+
+	public Dock getBoatDock() {
+		return boatDock;
+	}
+
+	public void setBoatDock(Dock boatDock) {
+		this.boatDock = boatDock;
+	}
+
 	@Override
 	public String toString() {
 		return "Boat [boatName=" + boatName + ", serialNum=" + serialNum
-				+ ", insurance=" + insurance + "]";
+				+ ", insurance=" + insurance + ", boatModel=" + boatModel
+				+ ", boatOwner=" + boatOwner + ", boatDock=" + boatDock + "]";
 	}
 
 	@Override
