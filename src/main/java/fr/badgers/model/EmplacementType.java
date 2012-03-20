@@ -1,8 +1,14 @@
 package fr.badgers.model;
 
+import java.io.Serializable;
 
-public class EmplacementType {
 
+public class EmplacementType implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int numType;
 	private int typeLength;
 	private int typeWidth;

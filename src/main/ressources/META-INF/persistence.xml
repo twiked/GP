@@ -2,13 +2,13 @@
 <persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
   <persistence-unit name="GP" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-	<class>fr.badgers.Boat</class>
-	<class>fr.badgers.Dock</class>
-	<class>fr.badgers.Emplacement</class>
-	<class>fr.badgers.EmplacementType</class>
-	<class>fr.badgers.Hulk</class>
-	<class>fr.badgers.Model</class>
-	<class>fr.badgers.Owner</class>
+	<class>fr.badgers.model.Boat</class>
+	<class>fr.badgers.model.Dock</class>
+	<class>fr.badgers.model.Emplacement</class>
+	<class>fr.badgers.model.EmplacementType</class>
+	<class>fr.badgers.model.Hulk</class>
+	<class>fr.badgers.model.Model</class>
+	<class>fr.badgers.model.Owner</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://88.190.232.239:3306/jpa"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
@@ -16,7 +16,7 @@
       <property name="javax.persistence.jdbc.password"  value="jpa"/>
       <property name="eclipselink.logging.file" value="output.log"/>
       <property name="eclipselink.logging.level" value="FINE"/>
-      <property name="eclipselink.dbl-generation" value="create-tables"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
     </properties>
   </persistence-unit>
 </persistence>

@@ -1,12 +1,81 @@
-[EL Info]: 2012-03-20 12:06:49.729--ServerSession(27859157)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.2.0.v20110202-r8913
-[EL Fine]: 2012-03-20 12:06:50.342--Thread(Thread[AWT-EventQueue-0,6,main])--Detected Vendor platform: org.eclipse.persistence.platform.database.MySQLPlatform
-[EL Config]: 2012-03-20 12:06:50.37--ServerSession(27859157)--Connection(10769718)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
+[EL Config]: 2012-03-20 12:15:01.156--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Model] is set to [FIELD].
+[EL Config]: 2012-03-20 12:15:01.198--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Dock] is set to [FIELD].
+[EL Config]: 2012-03-20 12:15:01.198--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Owner] is set to [FIELD].
+[EL Config]: 2012-03-20 12:15:01.199--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Boat] is set to [FIELD].
+[EL Config]: 2012-03-20 12:15:01.199--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field boatOwner] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-20 12:15:01.208--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field boatOwner] is being defaulted to: class fr.badgers.model.Owner.
+[EL Config]: 2012-03-20 12:15:01.208--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field boatModel] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-20 12:15:01.209--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field boatModel] is being defaulted to: class fr.badgers.model.Model.
+[EL Config]: 2012-03-20 12:15:01.209--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field boatDock] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-20 12:15:01.209--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field boatDock] is being defaulted to: class fr.badgers.model.Dock.
+[EL Config]: 2012-03-20 12:15:01.209--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Hulk] is set to [FIELD].
+[EL Config]: 2012-03-20 12:15:01.21--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Emplacement] is set to [FIELD].
+[EL Config]: 2012-03-20 12:15:01.21--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field hulk] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-20 12:15:01.21--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field hulk] is being defaulted to: class fr.badgers.model.Hulk.
+[EL Config]: 2012-03-20 12:15:01.211--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Model] is being defaulted to: Model.
+[EL Config]: 2012-03-20 12:15:01.213--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Model] is being defaulted to: MODEL.
+[EL Config]: 2012-03-20 12:15:01.234--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field serie] is being defaulted to: SERIE.
+[EL Config]: 2012-03-20 12:15:01.236--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field modLength] is being defaulted to: MODLENGTH.
+[EL Config]: 2012-03-20 12:15:01.236--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field modWidth] is being defaulted to: MODWIDTH.
+[EL Config]: 2012-03-20 12:15:01.236--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field modId] is being defaulted to: MODID.
+[EL Config]: 2012-03-20 12:15:01.236--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field modDraft] is being defaulted to: MODDRAFT.
+[EL Config]: 2012-03-20 12:15:01.237--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field type] is being defaulted to: TYPE.
+[EL Config]: 2012-03-20 12:15:01.237--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field constructor] is being defaulted to: CONSTRUCTOR.
+[EL Config]: 2012-03-20 12:15:01.238--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Dock] is being defaulted to: Dock.
+[EL Config]: 2012-03-20 12:15:01.238--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Dock] is being defaulted to: DOCK.
+[EL Config]: 2012-03-20 12:15:01.238--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field codeDock] is being defaulted to: CODEDOCK.
+[EL Config]: 2012-03-20 12:15:01.239--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nameDock] is being defaulted to: NAMEDOCK.
+[EL Config]: 2012-03-20 12:15:01.239--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Owner] is being defaulted to: Owner.
+[EL Config]: 2012-03-20 12:15:01.239--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Owner] is being defaulted to: OWNER.
+[EL Config]: 2012-03-20 12:15:01.239--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field telOwn] is being defaulted to: TELOWN.
+[EL Config]: 2012-03-20 12:15:01.239--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nameOwn] is being defaulted to: NAMEOWN.
+[EL Config]: 2012-03-20 12:15:01.24--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field numOwn] is being defaulted to: NUMOWN.
+[EL Config]: 2012-03-20 12:15:01.24--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field addrOwn] is being defaulted to: ADDROWN.
+[EL Config]: 2012-03-20 12:15:01.24--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Boat] is being defaulted to: Boat.
+[EL Config]: 2012-03-20 12:15:01.24--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Boat] is being defaulted to: BOAT.
+[EL Config]: 2012-03-20 12:15:01.24--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field insurance] is being defaulted to: INSURANCE.
+[EL Config]: 2012-03-20 12:15:01.241--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field boatName] is being defaulted to: BOATNAME.
+[EL Config]: 2012-03-20 12:15:01.241--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field serialNum] is being defaulted to: SERIALNUM.
+[EL Config]: 2012-03-20 12:15:01.241--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Hulk] is being defaulted to: Hulk.
+[EL Config]: 2012-03-20 12:15:01.241--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Hulk] is being defaulted to: HULK.
+[EL Config]: 2012-03-20 12:15:01.241--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field hulkName] is being defaulted to: HULKNAME.
+[EL Config]: 2012-03-20 12:15:01.242--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field pondName] is being defaulted to: PONDNAME.
+[EL Config]: 2012-03-20 12:15:01.242--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field hulkId] is being defaulted to: HULKID.
+[EL Config]: 2012-03-20 12:15:01.242--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field reserved] is being defaulted to: RESERVED.
+[EL Config]: 2012-03-20 12:15:01.242--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Emplacement] is being defaulted to: Emplacement.
+[EL Config]: 2012-03-20 12:15:01.242--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Emplacement] is being defaulted to: EMPLACEMENT.
+[EL Config]: 2012-03-20 12:15:01.243--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field numEmpl] is being defaulted to: NUMEMPL.
+[EL Config]: 2012-03-20 12:15:01.243--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field emplType] is being defaulted to: EMPLTYPE.
+[EL Config]: 2012-03-20 12:15:01.277--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field hulk] is being defaulted to: HULKID.
+[EL Config]: 2012-03-20 12:15:01.277--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field hulk] is being defaulted to: HULK_HULKID.
+[EL Config]: 2012-03-20 12:15:01.277--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field boatModel] is being defaulted to: MODID.
+[EL Config]: 2012-03-20 12:15:01.277--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field boatModel] is being defaulted to: BOATMODEL_MODID.
+[EL Config]: 2012-03-20 12:15:01.278--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field boatDock] is being defaulted to: CODEDOCK.
+[EL Config]: 2012-03-20 12:15:01.278--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field boatDock] is being defaulted to: BOATDOCK_CODEDOCK.
+[EL Config]: 2012-03-20 12:15:01.278--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field boatOwner] is being defaulted to: NUMOWN.
+[EL Config]: 2012-03-20 12:15:01.278--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field boatOwner] is being defaulted to: BOATOWNER_NUMOWN.
+[EL Info]: 2012-03-20 12:15:01.988--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.2.0.v20110202-r8913
+[EL Fine]: 2012-03-20 12:15:02.357--Thread(Thread[AWT-EventQueue-0,6,main])--Detected Vendor platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: 2012-03-20 12:15:02.377--ServerSession(11372121)--Connection(14949315)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
 	platform=>MySQLPlatform
 	user name=> "twix"
 	datasource URL=> "jdbc:mysql://88.190.232.239:3306/jpa"
 ))
-[EL Config]: 2012-03-20 12:06:50.524--ServerSession(27859157)--Connection(7143488)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:mysql://88.190.232.239:3306/jpa
+[EL Config]: 2012-03-20 12:15:02.513--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:mysql://88.190.232.239:3306/jpa
 	User: twix@d165.iut.univ-aix.fr
 	Database: MySQL  Version: 5.5.21-log
 	Driver: MySQL-AB JDBC Driver  Version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
-[EL Info]: 2012-03-20 12:06:50.534--ServerSession(27859157)--Thread(Thread[AWT-EventQueue-0,6,main])--file:/home/gileri/GP/target/classes/_GP login successful
+[EL Info]: 2012-03-20 12:15:02.611--ServerSession(11372121)--Thread(Thread[AWT-EventQueue-0,6,main])--file:/home/gileri/GP/target/classes/_GP login successful
+[EL Fine]: 2012-03-20 12:15:02.636--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE BOAT (SERIALNUM INTEGER NOT NULL, BOATNAME VARCHAR(255), INSURANCE VARCHAR(255), BOATDOCK_CODEDOCK INTEGER, BOATMODEL_MODID INTEGER, BOATOWNER_NUMOWN INTEGER, PRIMARY KEY (SERIALNUM))
+[EL Fine]: 2012-03-20 12:15:03.635--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE DOCK (CODEDOCK INTEGER NOT NULL, NAMEDOCK VARCHAR(255), PRIMARY KEY (CODEDOCK))
+[EL Fine]: 2012-03-20 12:15:03.808--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE EMPLACEMENT (NUMEMPL INTEGER NOT NULL, EMPLTYPE LONGBLOB, HULK_HULKID INTEGER, PRIMARY KEY (NUMEMPL))
+[EL Fine]: 2012-03-20 12:15:04.076--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE HULK (HULKID INTEGER NOT NULL, HULKNAME VARCHAR(255), PONDNAME VARCHAR(255), RESERVED TINYINT(1) default 0, PRIMARY KEY (HULKID))
+[EL Fine]: 2012-03-20 12:15:04.413--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE MODEL (MODID INTEGER NOT NULL, CONSTRUCTOR VARCHAR(255), MODDRAFT INTEGER, MODLENGTH INTEGER, MODWIDTH INTEGER, SERIE VARCHAR(255), TYPE VARCHAR(255), PRIMARY KEY (MODID))
+[EL Fine]: 2012-03-20 12:15:04.637--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE OWNER (NUMOWN INTEGER NOT NULL, ADDROWN VARCHAR(255), NAMEOWN VARCHAR(255), TELOWN VARCHAR(255), PRIMARY KEY (NUMOWN))
+[EL Fine]: 2012-03-20 12:15:04.947--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE BOAT ADD CONSTRAINT FK_BOAT_BOATMODEL_MODID FOREIGN KEY (BOATMODEL_MODID) REFERENCES MODEL (MODID)
+[EL Fine]: 2012-03-20 12:15:05.535--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE BOAT ADD CONSTRAINT FK_BOAT_BOATDOCK_CODEDOCK FOREIGN KEY (BOATDOCK_CODEDOCK) REFERENCES DOCK (CODEDOCK)
+[EL Fine]: 2012-03-20 12:15:06.094--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE BOAT ADD CONSTRAINT FK_BOAT_BOATOWNER_NUMOWN FOREIGN KEY (BOATOWNER_NUMOWN) REFERENCES OWNER (NUMOWN)
+[EL Fine]: 2012-03-20 12:15:07.059--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE EMPLACEMENT ADD CONSTRAINT FK_EMPLACEMENT_HULK_HULKID FOREIGN KEY (HULK_HULKID) REFERENCES HULK (HULKID)
+[EL Fine]: 2012-03-20 12:15:07.596--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+[EL Fine]: 2012-03-20 12:15:07.703--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT * FROM SEQUENCE WHERE SEQ_NAME = SEQ_GEN
+[EL Fine]: 2012-03-20 12:15:07.719--ServerSession(11372121)--Connection(22885256)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values (SEQ_GEN, 0)

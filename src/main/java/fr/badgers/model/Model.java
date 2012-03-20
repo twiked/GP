@@ -1,10 +1,16 @@
 package fr.badgers.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
-public class Model {
+public class Model implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	private int modId;
 	private String serie;
