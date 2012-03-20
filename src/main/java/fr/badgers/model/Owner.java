@@ -1,7 +1,12 @@
 package fr.badgers.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Owner {
 	
+	@Id
+	@GeneratedValue
 	private int numOwn;
 	private String nameOwn;
 	private String addrOwn;

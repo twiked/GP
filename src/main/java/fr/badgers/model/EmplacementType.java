@@ -1,8 +1,11 @@
 package fr.badgers.model;
 
+import javax.persistence.*;
+
+@Entity
 public class EmplacementType {
 
-	
+	@Id
 	private int numType;
 	private int typeLength;
 	private int typeWidth;

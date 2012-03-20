@@ -1,7 +1,11 @@
 package fr.badgers.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Dock {
 	
+	@Id
 	private int codeDock;
 	private String nameDock;
 	

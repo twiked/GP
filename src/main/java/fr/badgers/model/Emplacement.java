@@ -1,7 +1,11 @@
 package fr.badgers.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Emplacement {
 	
+	@Id
 	private int numEmpl;
 	private EmplacementType emplType;
 	private Hulk hulk;

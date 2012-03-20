@@ -2,6 +2,9 @@ package fr.badgers.model;
 
 import java.io.Serializable;
 
+import javax.persistence.*;
+
+@Entity
 public class Boat implements Serializable {
 	/**
 	 * 
@@ -9,6 +12,7 @@ public class Boat implements Serializable {
 	private static final long serialVersionUID = -6405580716160297097L;
 
 	private String boatName;
+	@Id
 	private int serialNum;
 	private String insurance;
 	

@@ -1,7 +1,11 @@
 package fr.badgers.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Hulk {
 	
+	@Id
 	private int hulkId;
 	private String hulkName;
 	private String pondName;

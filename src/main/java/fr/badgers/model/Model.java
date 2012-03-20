@@ -1,7 +1,11 @@
 package fr.badgers.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Model {
 
+	@Id
 	private int modId;
 	private String serie;
 	private String type;
