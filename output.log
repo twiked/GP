@@ -1,0 +1,12 @@
+[EL Info]: 2012-03-20 12:06:49.729--ServerSession(27859157)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.2.0.v20110202-r8913
+[EL Fine]: 2012-03-20 12:06:50.342--Thread(Thread[AWT-EventQueue-0,6,main])--Detected Vendor platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: 2012-03-20 12:06:50.37--ServerSession(27859157)--Connection(10769718)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "twix"
+	datasource URL=> "jdbc:mysql://88.190.232.239:3306/jpa"
+))
+[EL Config]: 2012-03-20 12:06:50.524--ServerSession(27859157)--Connection(7143488)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:mysql://88.190.232.239:3306/jpa
+	User: twix@d165.iut.univ-aix.fr
+	Database: MySQL  Version: 5.5.21-log
+	Driver: MySQL-AB JDBC Driver  Version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+[EL Info]: 2012-03-20 12:06:50.534--ServerSession(27859157)--Thread(Thread[AWT-EventQueue-0,6,main])--file:/home/gileri/GP/target/classes/_GP login successful

@@ -2,8 +2,10 @@ package fr.badgers.gui;
 
 import java.awt.EventQueue;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class MainWindow {
 
@@ -16,6 +18,9 @@ public class MainWindow {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
+					EntityManager em = emf.createEntityManager();
+					
 					MainWindow window = new MainWindow();
 					window.frame.setVisible(true);
 				} catch (Exception e) {

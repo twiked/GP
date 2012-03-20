@@ -1,18 +1,13 @@
 package fr.badgers.model;
 
-import javax.persistence.*;
 
-@Entity
 public class EmplacementType {
 
-	@Id
 	private int numType;
 	private int typeLength;
 	private int typeWidth;
 	private int typeDepth;
-	
-	
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -20,8 +15,6 @@ public class EmplacementType {
 		result = prime * result + numType;
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -37,8 +30,6 @@ public class EmplacementType {
 		return true;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "EmplacementType [numType=" + numType + ", typeLength="
@@ -46,58 +37,39 @@ public class EmplacementType {
 				+ typeDepth + "]";
 	}
 
-
-
 	public int getNumType() {
 		return numType;
 	}
-
-
 
 	public void setNumType(int numType) {
 		this.numType = numType;
 	}
 
-
-
 	public int getTypeLength() {
 		return typeLength;
 	}
-
-
 
 	public void setTypeLength(int typeLength) {
 		this.typeLength = typeLength;
 	}
 
-
-
 	public int getTypeWidth() {
 		return typeWidth;
 	}
-
-
 
 	public void setTypeWidth(int typeWidth) {
 		this.typeWidth = typeWidth;
 	}
 
-
-
 	public int getTypeDepth() {
 		return typeDepth;
 	}
-
-
 
 	public void setTypeDepth(int typeDepth) {
 		this.typeDepth = typeDepth;
 	}
 
+	public EmplacementType() {
 
-
-	public EmplacementType()
-	{
-		
 	}
 }
