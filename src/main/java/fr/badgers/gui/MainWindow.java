@@ -11,6 +11,11 @@ import javax.swing.JComboBox;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import javax.swing.JSplitPane;
+import java.awt.BorderLayout;
+import javax.swing.JLabel;
+import javax.swing.BoxLayout;
+import java.awt.FlowLayout;
 
 public class MainWindow {
 
@@ -61,9 +66,18 @@ public class MainWindow {
 		JPanel panel = new JPanel();
 		panel.setToolTipText("");
 		mainpanel.addTab("Sortie", null, panel, null);
+		FlowLayout fl_panel = new FlowLayout(FlowLayout.LEADING, 5, 5);
+		fl_panel.setAlignOnBaseline(true);
+		panel.setLayout(fl_panel);
+		
+		JLabel lblEntre = new JLabel("Entrée");
+		panel.add(lblEntre);
+		
+		JSplitPane splitPane = new JSplitPane();
+		panel.add(splitPane);
 		
 		JComboBox comboBox = new JComboBox();
+		splitPane.setLeftComponent(comboBox);
 		comboBox.setToolTipText("Propriétaire");
-		panel.add(comboBox);
 	}
 }
