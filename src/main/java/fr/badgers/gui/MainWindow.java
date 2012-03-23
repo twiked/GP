@@ -6,6 +6,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
+import javax.swing.JComboBox;
+import javax.swing.JCheckBox;
+import javax.swing.JPanel;
+import javax.swing.JButton;
 
 public class MainWindow {
 
@@ -45,7 +50,20 @@ public class MainWindow {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MainPanel mainpanel = new MainPanel();
-		frame.add(mainpanel);
+		frame.getContentPane().add(mainpanel);
+		
+		JPanel panel_1 = new JPanel();
+		mainpanel.addTab("Affectation", null, panel_1, null);
+		
+		JPanel panel_2 = new JPanel();
+		mainpanel.addTab("Statistiques", null, panel_2, null);
+		
+		JPanel panel = new JPanel();
+		panel.setToolTipText("");
+		mainpanel.addTab("Sortie", null, panel, null);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setToolTipText("Propriétaire");
+		panel.add(comboBox);
 	}
-
 }
