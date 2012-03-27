@@ -1,12 +1,8 @@
 package fr.badgers.model.dao;
 
-import javax.persistence.EntityManager;
+import fr.badgers.model.EnAttente;
 
-public class DAOEnAttente extends DAOGeneriqueJPA<Object, Object> {
+public interface DAOEnAttente extends DAO<EnAttente, Integer> {
 
-	public DAOEnAttente(EntityManager entityManager) {
-		super(entityManager);
-		// TODO Auto-generated constructor stub
-	}
 
 }

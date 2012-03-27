@@ -1,12 +1,7 @@
 package fr.badgers.model.dao;
 
-import javax.persistence.EntityManager;
+import fr.badgers.model.Ponton;
 
-public class DAOPonton extends DAOGeneriqueJPA<Object, Object> {
-
-	public DAOPonton(EntityManager entityManager) {
-		super(entityManager);
-		// TODO Auto-generated constructor stub
-	}
+public interface DAOPonton extends DAO<Ponton, Integer> {
 
 }

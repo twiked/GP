@@ -1,12 +1,7 @@
 package fr.badgers.model.dao;
 
-import javax.persistence.EntityManager;
+import fr.badgers.model.Occuper;
 
-public class DAOOccuper extends DAOGeneriqueJPA<Object, Object> {
-
-	public DAOOccuper(EntityManager entityManager) {
-		super(entityManager);
-		// TODO Auto-generated constructor stub
-	}
+public interface DAOOccuper extends DAO<Occuper, Integer> {
 
 }

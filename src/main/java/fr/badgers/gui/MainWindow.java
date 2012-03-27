@@ -25,6 +25,7 @@ import javax.swing.SpinnerModel;
 
 import fr.badgers.model.Proprietaire;
 import fr.badgers.model.dao.DAOProprietaire;
+import fr.badgers.model.dao.jpa.DAOProprietaireJPA;
 
 public class MainWindow {
 
@@ -66,7 +67,7 @@ public class MainWindow {
 		MainPanel mainpanel = new MainPanel();
 		frame.getContentPane().add(mainpanel);
 		
-		List<Object> proprietaires = DAOProprietaire.FindAll();
+		List<Proprietaire> proprietaires = DAOProprietaireJPA.FindAll();
 		
 		JPanel panel_1 = new JPanel();
 		mainpanel.addTab("Affectation", null, panel_1, null);

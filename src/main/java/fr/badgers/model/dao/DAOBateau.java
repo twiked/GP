@@ -1,12 +1,7 @@
 package fr.badgers.model.dao;
 
-import javax.persistence.EntityManager;
+import fr.badgers.model.Bateau;
 
-public class DAOBateau extends DAOGeneriqueJPA<Object, Object> {
-
-	public DAOBateau(EntityManager entityManager) {
-		super(entityManager);
-		// TODO Auto-generated constructor stub
-	}
+public interface DAOBateau extends DAO<Bateau, Integer> {
 
 }

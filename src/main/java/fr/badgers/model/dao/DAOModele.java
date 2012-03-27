@@ -1,12 +1,7 @@
 package fr.badgers.model.dao;
 
-import javax.persistence.EntityManager;
+import fr.badgers.model.Modele;
 
-public class DAOModele extends DAOGeneriqueJPA<Object, Object> {
-
-	public DAOModele(EntityManager entityManager) {
-		super(entityManager);
-		// TODO Auto-generated constructor stub
-	}
+public interface DAOModele extends DAO<Modele, Integer> {
 
 }

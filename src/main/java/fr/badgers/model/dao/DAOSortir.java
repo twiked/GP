@@ -1,12 +1,7 @@
 package fr.badgers.model.dao;
 
-import javax.persistence.EntityManager;
+import fr.badgers.model.Sortir;
 
-public class DAOSortir extends DAOGeneriqueJPA<Object, Object> {
-
-	public DAOSortir(EntityManager entityManager) {
-		super(entityManager);
-		// TODO Auto-generated constructor stub
-	}
+public interface DAOSortir extends DAO<Sortir, Integer> {
 
 }
