@@ -16,8 +16,11 @@ public class Boat implements Serializable {
 	private int serialNum;
 	private String insurance;
 	
+	@ManyToOne
 	private Model boatModel;
+	@ManyToOne
 	private Owner boatOwner;
+	@ManyToOne
 	private Dock boatDock;
 	
 	

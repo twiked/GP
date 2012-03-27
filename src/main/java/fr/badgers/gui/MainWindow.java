@@ -1,21 +1,24 @@
 package fr.badgers.gui;
 
+import java.awt.Component;
 import java.awt.EventQueue;
+import java.awt.FlowLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.Date;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.swing.JFrame;
-import javax.swing.JTabbedPane;
-import javax.swing.JComboBox;
-import javax.swing.JCheckBox;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JSplitPane;
-import java.awt.BorderLayout;
-import javax.swing.JLabel;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
-import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSplitPane;
 
 public class MainWindow {
 
@@ -66,18 +69,63 @@ public class MainWindow {
 		JPanel panel = new JPanel();
 		panel.setToolTipText("");
 		mainpanel.addTab("Sortie", null, panel, null);
-		FlowLayout fl_panel = new FlowLayout(FlowLayout.LEADING, 5, 5);
-		fl_panel.setAlignOnBaseline(true);
-		panel.setLayout(fl_panel);
 		
-		JLabel lblEntre = new JLabel("Entrée");
-		panel.add(lblEntre);
+		JSplitPane splitPane_1 = new JSplitPane();
+		splitPane_1.setResizeWeight(0.5);
+		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		
-		JSplitPane splitPane = new JSplitPane();
-		panel.add(splitPane);
+		Component verticalStrut_1 = Box.createVerticalStrut(20);
+		panel.add(verticalStrut_1);
+		panel.add(splitPane_1);
+		
+		JPanel panel_3 = new JPanel();
+		splitPane_1.setLeftComponent(panel_3);
+		FlowLayout fl_panel_3 = new FlowLayout(FlowLayout.CENTER, 5, 5);
+		panel_3.setLayout(fl_panel_3);
+		
+		JLabel label = new JLabel("Entrée");
+		panel_3.add(label);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		panel_3.add(comboBox_1);
+		comboBox_1.setToolTipText("Propriétaire");
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setToolTipText("Bateau");
+		panel_3.add(comboBox_2);
+		
+		JFormattedTextField frmtdtxtfldJjmmaaaa = new JFormattedTextField(new Date());
+		frmtdtxtfldJjmmaaaa.setText("JJ-MM-AAAA");
+		panel_3.add(frmtdtxtfldJjmmaaaa);
+		
+		JButton btnConfirmEntre = new JButton("Valider");
+		panel_3.add(btnConfirmEntre);
+		btnConfirmEntre.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		
+		JPanel panel_4 = new JPanel();
+		splitPane_1.setRightComponent(panel_4);
+		
+		JLabel lblSortie = new JLabel("Sortie");
+		panel_4.add(lblSortie);
 		
 		JComboBox comboBox = new JComboBox();
-		splitPane.setLeftComponent(comboBox);
+		panel_4.add(comboBox);
 		comboBox.setToolTipText("Propriétaire");
+		
+		JButton btnConfirmSortie = new JButton("Valider");
+		panel_4.add(btnConfirmSortie);
+		btnConfirmSortie.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
+		
+		Component verticalStrut = Box.createVerticalStrut(20);
+		panel.add(verticalStrut);
 	}
 }
