@@ -3,8 +3,10 @@ package fr.badgers.gui;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
+import java.awt.Label;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -19,6 +21,10 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JSplitPane;
 import javax.swing.SpinnerDateModel;
+import javax.swing.SpinnerModel;
+
+import fr.badgers.model.Proprietaire;
+import fr.badgers.model.dao.DAOProprietaire;
 
 public class MainWindow {
 
@@ -60,6 +66,8 @@ public class MainWindow {
 		MainPanel mainpanel = new MainPanel();
 		frame.getContentPane().add(mainpanel);
 		
+		List<Object> proprietaires = DAOProprietaire.FindAll();
+		
 		JPanel panel_1 = new JPanel();
 		mainpanel.addTab("Affectation", null, panel_1, null);
 		
@@ -84,10 +92,14 @@ public class MainWindow {
 		FlowLayout fl_panel_3 = new FlowLayout(FlowLayout.CENTER, 5, 5);
 		panel_3.setLayout(fl_panel_3);
 		
-		JLabel label = new JLabel("Entrée");
+		JLabel label = new JLabel("Retour");
 		panel_3.add(label);
 		
 		JComboBox comboBox_1 = new JComboBox();
+		for (int i = 0; i<proprietaires.size(); ++i)
+		{
+			comboBox_1.addItem(proprietaires.get(i));
+		}
 		panel_3.add(comboBox_1);
 		comboBox_1.setToolTipText("Propriétaire");
 		
@@ -115,6 +127,13 @@ public class MainWindow {
 		JComboBox comboBox = new JComboBox();
 		panel_4.add(comboBox);
 		comboBox.setToolTipText("Propriétaire");
+		
+		JComboBox comboBox_3 = new JComboBox();
+		comboBox_3.setToolTipText("Bateau");
+		panel_4.add(comboBox_3);
+		
+		JSpinner spinner_1 = new JSpinner(new SpinnerDateModel());
+		panel_4.add(spinner_1);
 		
 		JButton btnConfirmSortie = new JButton("Valider");
 		panel_4.add(btnConfirmSortie);
