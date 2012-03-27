@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
@@ -19,6 +20,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
+import javax.swing.text.DateFormatter;
+import javax.swing.JSpinner;
 
 public class MainWindow {
 
@@ -95,8 +98,11 @@ public class MainWindow {
 		comboBox_2.setToolTipText("Bateau");
 		panel_3.add(comboBox_2);
 		
-		JFormattedTextField frmtdtxtfldJjmmaaaa = new JFormattedTextField(new Date());
-		frmtdtxtfldJjmmaaaa.setText("JJ-MM-AAAA");
+		JSpinner spinner = new JSpinner();
+		panel_3.add(spinner);
+		
+		JFormattedTextField frmtdtxtfldJjmmaaaa = new JFormattedTextField(new DateFormatter(new SimpleDateFormat("d-m-y:H-m")));
+		frmtdtxtfldJjmmaaaa.setText("JJ-MM-AAAA:HH-MM");
 		panel_3.add(frmtdtxtfldJjmmaaaa);
 		
 		JButton btnConfirmEntre = new JButton("Valider");
