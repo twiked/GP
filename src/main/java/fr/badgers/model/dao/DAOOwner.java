@@ -1,5 +1,5 @@
 package fr.badgers.model.dao;
-
+/*
 import fr.badgers.model.Owner;
 
 public class DAOOwner extends DAO {
@@ -21,3 +21,4 @@ public class DAOOwner extends DAO {
 			em.remove(own);
 	}
 }
+*/

@@ -1,5 +1,5 @@
 package fr.badgers.model.dao;
-
+/*
 import fr.badgers.model.Model;
 
 public class DAOModel extends DAO{
@@ -21,3 +21,4 @@ public class DAOModel extends DAO{
 			em.remove(mod);
 	}
 }
+*/
