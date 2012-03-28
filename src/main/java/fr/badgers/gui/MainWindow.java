@@ -123,11 +123,10 @@ public class MainWindow {
 		// We fill bomboBox_1 with proprietaires
 		for (Proprietaire p : proprietaires)
 		{
-			comboBox_1.addItem(p.getNom());
+			comboBox_1.addItem(p);
 		}
 		panel_3.add(comboBox_1);
 		comboBox_1.setToolTipText("Propriétaire");
-		
 		
 		JComboBox comboBox_2 = new JComboBox();
 		for (Bateau b : bateaux)
