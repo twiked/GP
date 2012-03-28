@@ -59,7 +59,7 @@ public class DAOPontonJPA implements DAOPonton {
 
 	public List<Ponton> FindAll() {
 		TypedQuery<Ponton> query = entityManager.createNamedQuery(
-				"SELECT * FROM Ponton", Ponton.class);
+				"SELECT P FROM Ponton P", Ponton.class);
 		return query.getResultList();
 	}
 

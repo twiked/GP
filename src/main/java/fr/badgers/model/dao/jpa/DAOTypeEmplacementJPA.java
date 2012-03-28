@@ -59,7 +59,7 @@ public class DAOTypeEmplacementJPA implements DAOTypeEmplacement {
 
 	public List<TypeEmplacement> FindAll() {
 		TypedQuery<TypeEmplacement> query = entityManager.createNamedQuery(
-				"SELECT * FROM TypeEmplacement", TypeEmplacement.class);
+				"SELECT TP FROM TypeEmplacement TP", TypeEmplacement.class);
 		return query.getResultList();
 	}
 

@@ -59,7 +59,7 @@ public class DAOModeleJPA implements DAOModele {
 
 	public List<Modele> FindAll() {
 		TypedQuery<Modele> query = entityManager.createNamedQuery(
-				"SELECT * FROM Modele", Modele.class);
+				"SELECT M FROM Modele M", Modele.class);
 		return query.getResultList();
 	}
 

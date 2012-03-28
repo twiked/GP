@@ -59,7 +59,7 @@ public class DAOPortJPA implements DAOPort {
 
 	public List<Port> FindAll() {
 		TypedQuery<Port> query = entityManager.createNamedQuery(
-				"SELECT * FROM Port", Port.class);
+				"SELECT P FROM Port P", Port.class);
 		return query.getResultList();
 	}
 

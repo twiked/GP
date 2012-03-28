@@ -20,7 +20,8 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JSplitPane;
 import javax.swing.SpinnerDateModel;
-import fr.badgers.model.Proprietaire;
+import fr.badgers.model.*;
+import fr.badgers.model.dao.DAOBateau;
 import fr.badgers.model.dao.DAOProprietaire;
 import fr.badgers.model.dao.jpa.DAOFactoryJPA;
 
@@ -73,8 +74,8 @@ public class MainWindow {
 		
 		List<Proprietaire> proprietaires = daop.FindAll();
 		
-		System.out.println(daop.FindAll());
-		
+		DAOBateau daob = daof.createDAOBateau();
+		List<Bateau> bateaux = daob.FindAll();
 		/*
 		 * Affectation tab
 		 */
@@ -119,17 +120,23 @@ public class MainWindow {
 		panel_3.add(label);
 		
 		JComboBox comboBox_1 = new JComboBox();
-		
-		comboBox_1.addItem(proprietaires.get(0));
-		
+		// We fill bomboBox_1 with proprietaires
 		for (Proprietaire p : proprietaires)
 		{
-			comboBox_1.addItem(p);
+			comboBox_1.addItem(p.getNom());
 		}
 		panel_3.add(comboBox_1);
 		comboBox_1.setToolTipText("Propriétaire");
 		
+		
 		JComboBox comboBox_2 = new JComboBox();
+		for (Bateau b : bateaux)
+		{
+			if (comboBox_1.getSelectedItem() == b.getProprietaire())
+			{
+				comboBox_2.addItem(b);
+			}
+		}
 		comboBox_2.setToolTipText("Bateau");
 		panel_3.add(comboBox_2);
 		

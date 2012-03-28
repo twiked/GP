@@ -59,7 +59,7 @@ public class DAOProprietaireJPA implements DAOProprietaire {
 
 	public List<Proprietaire> FindAll() {
 		TypedQuery<Proprietaire> query = entityManager.createQuery(
-				"SELECT P FROM PROPRIETAIRE P", Proprietaire.class);
+				"SELECT P FROM Proprietaire P", Proprietaire.class);
 		return query.getResultList();
 	}
 
