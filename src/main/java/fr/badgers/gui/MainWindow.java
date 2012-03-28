@@ -26,11 +26,16 @@ import fr.badgers.model.*;
 import fr.badgers.model.dao.DAOBateau;
 import fr.badgers.model.dao.DAOProprietaire;
 import fr.badgers.model.dao.jpa.DAOFactoryJPA;
+import java.awt.Dimension;
 
 public class MainWindow {
 
 	private JFrame frame;
 
+	// An empty 'Proprietaire' to fill with the currently selected owner
+	Proprietaire currentProp = null;
+	// An empty 'Bateau' to fill with the currently selected boat
+	Bateau currentBoat = null;
 	/**
 	 * Launch the application.
 	 */
@@ -80,10 +85,7 @@ public class MainWindow {
 		// All boats
 		DAOBateau daob = daof.createDAOBateau();
 		List<Bateau> bateaux = daob.FindAll();
-		// An empty 'Proprietaire' to fill with the currently selected owner
-		Proprietaire currentProp = null;
-		// An empty 'Bateau' to fill with the currently selected boat
-		Bateau currentBoat = null;
+		
 		
 		/*
 		 * Affectation tab
@@ -117,7 +119,7 @@ public class MainWindow {
 		panel.add(splitPane_1);
 		
 		/*
-		 * Left panel
+		 * Upper panel
 		 */
 		
 		JPanel panel_3 = new JPanel();
@@ -125,29 +127,30 @@ public class MainWindow {
 		FlowLayout fl_panel_3 = new FlowLayout(FlowLayout.CENTER, 5, 5);
 		panel_3.setLayout(fl_panel_3);
 		
-		JLabel label = new JLabel("Retour");
-		panel_3.add(label);
-		
 		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JComboBox box = (JComboBox) e.getSource();
-				box.getSelectedItem();
-			}
-		});
-		
-		// We fill bomboBox_1 with proprietaires
+		// We fill comboBox_1 with proprietaires
 		currentProp = proprietaires.get(0);
 		comboBox_1.addItem("all");
 		for (Proprietaire p : proprietaires)
 		{
 			comboBox_1.addItem(p.getNom());
 		}
-		panel_3.add(comboBox_1);
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JComboBox box = (JComboBox) e.getSource();
+				currentProp = (Proprietaire) box.getSelectedItem();
+			}
+		});
 		comboBox_1.setToolTipText("Propriétaire");
+		panel_3.add(comboBox_1);
 		
 		JComboBox comboBox_2 = new JComboBox();
+		panel_3.add(comboBox_2);
 		comboBox_2.addItem("none");
+		comboBox_2.setToolTipText("Bateau");
+		
+		JSpinner spinner = new JSpinner(new SpinnerDateModel());
+		panel_3.add(spinner);
 		for (Bateau b : bateaux)
 		{
 			if (currentProp == null || comboBox_1.getSelectedItem().equals(b.getProprietaire()))
@@ -155,50 +158,40 @@ public class MainWindow {
 				comboBox_2.addItem(b.getNomBateau());
 			}
 		}
-		comboBox_2.setToolTipText("Bateau");
-		panel_3.add(comboBox_2);
 		
-		JSpinner spinner = new JSpinner(new SpinnerDateModel());
-		panel_3.add(spinner);
+		/*
+		 * Lower panel
+		 */
 		
-		JButton btnConfirmEntre = new JButton("Valider");
-		panel_3.add(btnConfirmEntre);
+		JPanel panel_4 = new JPanel();
+		splitPane_1.setRightComponent(panel_4);
+		
+		JLabel label = new JLabel("Retour");
+		panel_4.add(label);
+		
+		JButton btnConfirmEntre = new JButton("Confirmer retour");
+		panel_4.add(btnConfirmEntre);
 		btnConfirmEntre.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
 		
-		/*
-		 * Right panel
-		 */
+		Component rigidArea_1 = Box.createRigidArea(new Dimension(20, 20));
+		panel_4.add(rigidArea_1);
 		
-		JPanel panel_4 = new JPanel();
-		splitPane_1.setRightComponent(panel_4);
+		Component rigidArea = Box.createRigidArea(new Dimension(20, 20));
+		panel_4.add(rigidArea);
+		
+		JButton btnConfirmSortie = new JButton("Confirmer sortie");
+		panel_4.add(btnConfirmSortie);
 		
 		JLabel lblSortie = new JLabel("Sortie");
 		panel_4.add(lblSortie);
-		
-		JComboBox comboBox = new JComboBox();
-		panel_4.add(comboBox);
-		comboBox.setToolTipText("Propriétaire");
-		
-		JComboBox comboBox_3 = new JComboBox();
-		comboBox_3.setToolTipText("Bateau");
-		panel_4.add(comboBox_3);
-		
-		JSpinner spinner_1 = new JSpinner(new SpinnerDateModel());
-		panel_4.add(spinner_1);
-		
-		JButton btnConfirmSortie = new JButton("Valider");
-		panel_4.add(btnConfirmSortie);
 		btnConfirmSortie.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
-		
-		Component verticalStrut = Box.createVerticalStrut(20);
-		panel.add(verticalStrut);
 	}
 }
