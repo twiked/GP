@@ -1,7 +1,5 @@
 package fr.badgers;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import javax.persistence.EntityManager;
@@ -28,13 +26,17 @@ public class FillData {
 		em.persist(p);
 		em.getTransaction().commit();*/
 		
-		String[] names1 = {"Jean", "Ben", "Mig", "Sal", "Ser", "Bim", "Xan", "Tur", "Dem"};
-		String[] names2 = {"ien", "lio", "mon", "nub", "zar", "bou", "hol", "sed", "lig"};
-		
+		String[] names1 = {"Jean", 	"Ben", 	"Mig", 	"Sal", 	"Ser", 	"Bim", 	"Xan", 
+							"Tur", 	"Dem", 	"Cha", 	"Zab", 	"Hih"};
+		String[] names2 = {"ien", 	"lio", 	"mon", 	"nub", 	"zar", 	"bou", 	"hol", 
+							"sed", 	"lig", 	"", 	"by", 	"man"};
+		int stringLength = names1.length;
 		for (int i = 0; i<20; ++i)
 		{
 			em.getTransaction().begin();
 			Proprietaire p = new Proprietaire();
+			// We generate random numbers to fill the 
+			p.setNom(names1[new Random().nextInt()%stringLength] + names2[new Random().nextInt()%stringLength]);
 			p.setAdresse("Volrundd");
 			p.setTelephone(null);
 			em.persist(p);

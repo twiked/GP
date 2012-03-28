@@ -3,6 +3,8 @@ package fr.badgers.gui;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -127,6 +129,13 @@ public class MainWindow {
 		panel_3.add(label);
 		
 		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JComboBox box = (JComboBox) e.getSource();
+				box.getSelectedItem();
+			}
+		});
+		
 		// We fill bomboBox_1 with proprietaires
 		currentProp = proprietaires.get(0);
 		comboBox_1.addItem("all");
