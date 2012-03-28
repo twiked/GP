@@ -136,7 +136,11 @@ public class MainWindow {
 			public void actionPerformed(ActionEvent e) {
 				JComboBox box = (JComboBox) e.getSource();
 				for (Proprietaire prop : proprietaires) {
-					if (prop.getNom().equals(box.getSelectedItem())) {
+					if (box.getSelectedItem().equals("all"))
+					{
+						currentProp = null;
+					}
+					else if (prop.getNom().equals(box.getSelectedItem())) {
 						currentProp = prop;
 					}
 				}
@@ -146,20 +150,14 @@ public class MainWindow {
 		panel_3.add(comboBox_1);
 
 		JComboBox comboBox_2 = new JComboBox();
-		panel_3.add(comboBox_2);
+		
 		comboBox_2.addItem("none");
 		comboBox_2.setToolTipText("Bateau");
-
+		FillBoatComboBox(comboBox_2);
+		panel_3.add(comboBox_2);
+		
 		JSpinner spinner = new JSpinner(new SpinnerDateModel());
 		panel_3.add(spinner);
-		for (Bateau b : bateaux) {
-			if (currentProp == null
-					|| comboBox_1.getSelectedItem().equals(b.getProprietaire())) {
-				// If currentProp is null it means we are selecting all the
-				// boats!
-				comboBox_2.addItem(b.getNomBateau());
-			}
-		}
 
 		/*
 		 * Lower panel
@@ -195,5 +193,17 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
+	}
+	
+	public void FillBoatComboBox(JComboBox comboBox) {
+		comboBox.removeAll();
+		for (Bateau b : bateaux) {
+			if (currentProp == null
+					|| currentProp.equals(b.getProprietaire())) {
+				// If currentProp is null it means we are selecting all the
+				// boats!
+				comboBox.addItem(b.getNomBateau());
+			}
+		}
 	}
 }
