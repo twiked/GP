@@ -36,6 +36,18 @@ public class MainWindow {
 	Proprietaire currentProp = null;
 	// An empty 'Bateau' to fill with the currently selected boat
 	Bateau currentBoat = null;
+
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
+	EntityManager em = emf.createEntityManager();
+
+	DAOFactoryJPA daof = new DAOFactoryJPA(em);
+	// All owners of a boat
+	DAOProprietaire daop = daof.createDAOProprietaire();
+	List<Proprietaire> proprietaires = daop.FindAll();
+	// All boats
+	DAOBateau daob = daof.createDAOBateau();
+	List<Bateau> bateaux = daob.FindAll();
+
 	/**
 	 * Launch the application.
 	 */
@@ -43,9 +55,10 @@ public class MainWindow {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
+					EntityManagerFactory emf = Persistence
+							.createEntityManagerFactory("GP");
 					EntityManager em = emf.createEntityManager();
-					
+
 					MainWindow window = new MainWindow();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
@@ -71,104 +84,93 @@ public class MainWindow {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MainPanel mainpanel = new MainPanel();
 		frame.getContentPane().add(mainpanel);
-		
-		/*
-		 * Initialize the values we will be using later
-		 */
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
-		EntityManager em = emf.createEntityManager();
 
-		DAOFactoryJPA daof = new DAOFactoryJPA(em);
-		// All owners of a boat 
-		DAOProprietaire daop = daof.createDAOProprietaire();
-		List<Proprietaire> proprietaires = daop.FindAll();
-		// All boats
-		DAOBateau daob = daof.createDAOBateau();
-		List<Bateau> bateaux = daob.FindAll();
-		
-		
 		/*
 		 * Affectation tab
 		 */
-		
+
 		JPanel panel_1 = new JPanel();
 		mainpanel.addTab("Affectation", null, panel_1, null);
-		
+
 		/*
 		 * Statistiques tab
 		 */
-		
+
 		JPanel panel_2 = new JPanel();
 		mainpanel.addTab("Statistiques", null, panel_2, null);
-		
+
 		/*
 		 * Sorties tab
 		 */
-		
+
 		JPanel panel = new JPanel();
 		panel.setToolTipText("");
 		mainpanel.addTab("Sorties", null, panel, null);
-		
+
 		JSplitPane splitPane_1 = new JSplitPane();
 		splitPane_1.setResizeWeight(0.5);
 		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-		
+
 		Component verticalStrut_1 = Box.createVerticalStrut(20);
 		panel.add(verticalStrut_1);
 		panel.add(splitPane_1);
-		
+
 		/*
 		 * Upper panel
 		 */
-		
+
 		JPanel panel_3 = new JPanel();
 		splitPane_1.setLeftComponent(panel_3);
 		FlowLayout fl_panel_3 = new FlowLayout(FlowLayout.CENTER, 5, 5);
 		panel_3.setLayout(fl_panel_3);
-		
+
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill comboBox_1 with proprietaires
 		currentProp = proprietaires.get(0);
 		comboBox_1.addItem("all");
-		for (Proprietaire p : proprietaires)
-		{
+		for (Proprietaire p : proprietaires) {
 			comboBox_1.addItem(p.getNom());
 		}
 		comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JComboBox box = (JComboBox) e.getSource();
-				currentProp = (Proprietaire) box.getSelectedItem();
+				for (Proprietaire prop : proprietaires) {
+					if (prop.getNom().equals(box.getSelectedItem())) {
+						currentProp = prop;
+					}
+				}
 			}
 		});
 		comboBox_1.setToolTipText("Propriétaire");
 		panel_3.add(comboBox_1);
-		
+
 		JComboBox comboBox_2 = new JComboBox();
 		panel_3.add(comboBox_2);
 		comboBox_2.addItem("none");
 		comboBox_2.setToolTipText("Bateau");
-		
+
 		JSpinner spinner = new JSpinner(new SpinnerDateModel());
 		panel_3.add(spinner);
-		for (Bateau b : bateaux)
-		{
-			if (currentProp == null || comboBox_1.getSelectedItem().equals(b.getProprietaire()))
-			{	// If currentProp is null it means we are selecting all the boats!
+		for (Bateau b : bateaux) {
+			if (currentProp == null
+					|| comboBox_1.getSelectedItem().equals(b.getProprietaire())) {
+				// If currentProp is null it means we are selecting all the
+				// boats!
 				comboBox_2.addItem(b.getNomBateau());
 			}
 		}
-		
+
 		/*
 		 * Lower panel
 		 */
-		
+
 		JPanel panel_4 = new JPanel();
 		splitPane_1.setRightComponent(panel_4);
-		
+
 		JLabel label = new JLabel("Retour");
 		panel_4.add(label);
-		
+
 		JButton btnConfirmEntre = new JButton("Confirmer retour");
 		panel_4.add(btnConfirmEntre);
 		btnConfirmEntre.addMouseListener(new MouseAdapter() {
@@ -176,16 +178,16 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
-		
+
 		Component rigidArea_1 = Box.createRigidArea(new Dimension(20, 20));
 		panel_4.add(rigidArea_1);
-		
+
 		Component rigidArea = Box.createRigidArea(new Dimension(20, 20));
 		panel_4.add(rigidArea);
-		
+
 		JButton btnConfirmSortie = new JButton("Confirmer sortie");
 		panel_4.add(btnConfirmSortie);
-		
+
 		JLabel lblSortie = new JLabel("Sortie");
 		panel_4.add(lblSortie);
 		btnConfirmSortie.addMouseListener(new MouseAdapter() {
