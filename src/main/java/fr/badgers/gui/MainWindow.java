@@ -127,7 +127,7 @@ public class MainWindow {
 
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill comboBox_1 with proprietaires
-		currentProp = proprietaires.get(0);
+		currentProp = null;
 		comboBox_1.addItem("all");
 		for (Proprietaire p : proprietaires) {
 			comboBox_1.addItem(p.getNom());
@@ -154,6 +154,21 @@ public class MainWindow {
 		comboBox_2.addItem("none");
 		comboBox_2.setToolTipText("Bateau");
 		FillBoatComboBox(comboBox_2);
+		comboBox_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JComboBox box = (JComboBox) e.getSource();
+				FillBoatComboBox(box);
+				for (Bateau bate : bateaux) {
+					if (box.getSelectedItem().equals("none"))
+					{
+						currentBoat = null;
+					}
+					else if (bate.getNomBateau().equals(box.getSelectedItem())) {
+						currentBoat = bate;
+					}
+				}
+			}
+		});
 		panel_3.add(comboBox_2);
 		
 		JSpinner spinner = new JSpinner(new SpinnerDateModel());
