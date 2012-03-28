@@ -58,7 +58,7 @@ public class DAOBateauJPA implements DAOBateau {
 	}
 
 	public List<Bateau> FindAll() {
-		TypedQuery<Bateau> query = entityManager.createNamedQuery(
+		TypedQuery<Bateau> query = entityManager.createQuery(
 				"SELECT B FROM Bateau B", Bateau.class);
 		return query.getResultList();
 	}

@@ -65,17 +65,24 @@ public class MainWindow {
 		MainPanel mainpanel = new MainPanel();
 		frame.getContentPane().add(mainpanel);
 		
-		
+		/*
+		 * Initialize the values we will be using later
+		 */
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
 		EntityManager em = emf.createEntityManager();
 
 		DAOFactoryJPA daof = new DAOFactoryJPA(em);
+		// All owners of a boat 
 		DAOProprietaire daop = daof.createDAOProprietaire();
-		
 		List<Proprietaire> proprietaires = daop.FindAll();
-		
+		// All boats
 		DAOBateau daob = daof.createDAOBateau();
 		List<Bateau> bateaux = daob.FindAll();
+		// An empty 'Proprietaire' to fill with the currently selected owner
+		Proprietaire currentProp = null;
+		// An empty 'Bateau' to fill with the currently selected boat
+		Bateau currentBoat = null;
+		
 		/*
 		 * Affectation tab
 		 */
@@ -121,19 +128,22 @@ public class MainWindow {
 		
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill bomboBox_1 with proprietaires
+		currentProp = proprietaires.get(0);
+		comboBox_1.addItem("all");
 		for (Proprietaire p : proprietaires)
 		{
-			comboBox_1.addItem(p);
+			comboBox_1.addItem(p.getNom());
 		}
 		panel_3.add(comboBox_1);
 		comboBox_1.setToolTipText("Propriétaire");
 		
 		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.addItem("none");
 		for (Bateau b : bateaux)
 		{
-			if (comboBox_1.getSelectedItem() == b.getProprietaire())
-			{
-				comboBox_2.addItem(b);
+			if (currentProp == null || comboBox_1.getSelectedItem().equals(b.getProprietaire()))
+			{	// If currentProp is null it means we are selecting all the boats!
+				comboBox_2.addItem(b.getNomBateau());
 			}
 		}
 		comboBox_2.setToolTipText("Bateau");

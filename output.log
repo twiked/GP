@@ -1,231 +1,232 @@
-[EL Config]: 2012-03-28 11:44:02.226--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Stationner] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.241--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field passager] is being defaulted to a one to one mapping.
-[EL Config]: 2012-03-28 11:44:02.268--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field passager] is being defaulted to: class fr.badgers.model.Passager.
-[EL Config]: 2012-03-28 11:44:02.269--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field emplacement] is being defaulted to a one to one mapping.
-[EL Config]: 2012-03-28 11:44:02.269--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field emplacement] is being defaulted to: class fr.badgers.model.Emplacement.
-[EL Config]: 2012-03-28 11:44:02.278--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Sortir] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.279--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field resident] is being defaulted to a one to one mapping.
-[EL Config]: 2012-03-28 11:44:02.279--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field resident] is being defaulted to: class fr.badgers.model.Resident.
-[EL Config]: 2012-03-28 11:44:02.28--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Bateau] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.281--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field proprietaire] is being defaulted to: class fr.badgers.model.Proprietaire.
-[EL Config]: 2012-03-28 11:44:02.282--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field modele] is being defaulted to: class fr.badgers.model.Modele.
-[EL Config]: 2012-03-28 11:44:02.282--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field portOrigine] is being defaulted to: class fr.badgers.model.Port.
-[EL Config]: 2012-03-28 11:44:02.282--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Resident] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.296--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Passager] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.296--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field provenance] is being defaulted to: class fr.badgers.model.Port.
-[EL Config]: 2012-03-28 11:44:02.296--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field destination] is being defaulted to: class fr.badgers.model.Port.
-[EL Config]: 2012-03-28 11:44:02.297--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.TypeEmplacement] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.297--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Ponton] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.297--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Port] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.298--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Proprietaire] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.298--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Occuper] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.299--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field emplacement] is being defaulted to a one to one mapping.
-[EL Config]: 2012-03-28 11:44:02.299--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field emplacement] is being defaulted to: class fr.badgers.model.Emplacement.
-[EL Config]: 2012-03-28 11:44:02.299--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field resident] is being defaulted to a one to one mapping.
-[EL Config]: 2012-03-28 11:44:02.299--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field resident] is being defaulted to: class fr.badgers.model.Resident.
-[EL Config]: 2012-03-28 11:44:02.3--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Modele] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.3--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Emplacement] is set to [FIELD].
-[EL Config]: 2012-03-28 11:44:02.301--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field type] is being defaulted to: class fr.badgers.model.TypeEmplacement.
-[EL Config]: 2012-03-28 11:44:02.301--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field ponton] is being defaulted to a one to one mapping.
-[EL Config]: 2012-03-28 11:44:02.301--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field ponton] is being defaulted to: class fr.badgers.model.Ponton.
-[EL Config]: 2012-03-28 11:44:02.302--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Stationner] is being defaulted to: Stationner.
-[EL Config]: 2012-03-28 11:44:02.305--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Stationner] is being defaulted to: STATIONNER.
-[EL Config]: 2012-03-28 11:44:02.326--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateDebut] is being defaulted to: DATEDEBUT.
-[EL Config]: 2012-03-28 11:44:02.328--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Sortir] is being defaulted to: Sortir.
-[EL Config]: 2012-03-28 11:44:02.328--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Sortir] is being defaulted to: SORTIR.
-[EL Config]: 2012-03-28 11:44:02.328--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateRetourReel] is being defaulted to: DATERETOURREEL.
-[EL Config]: 2012-03-28 11:44:02.329--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateDebut] is being defaulted to: DATEDEBUT.
-[EL Config]: 2012-03-28 11:44:02.329--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateRetourPrevu] is being defaulted to: DATERETOURPREVU.
-[EL Config]: 2012-03-28 11:44:02.329--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Resident] is being defaulted to: Resident.
-[EL Config]: 2012-03-28 11:44:02.329--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Bateau] is being defaulted to: Bateau.
-[EL Config]: 2012-03-28 11:44:02.329--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Bateau] is being defaulted to: BATEAU.
-[EL Config]: 2012-03-28 11:44:02.33--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field assurance] is being defaulted to: ASSURANCE.
-[EL Config]: 2012-03-28 11:44:02.33--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idBateau] is being defaulted to: IDBATEAU.
-[EL Config]: 2012-03-28 11:44:02.33--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nomBateau] is being defaulted to: NOMBATEAU.
-[EL Config]: 2012-03-28 11:44:02.33--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field numeroSerie] is being defaulted to: NUMEROSERIE.
-[EL Config]: 2012-03-28 11:44:02.338--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The discriminator column name for the root inheritance class [class fr.badgers.model.Bateau] is being defaulted to: DTYPE.
-[EL Config]: 2012-03-28 11:44:02.338--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Passager] is being defaulted to: Passager.
-[EL Config]: 2012-03-28 11:44:02.339--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.TypeEmplacement] is being defaulted to: TypeEmplacement.
-[EL Config]: 2012-03-28 11:44:02.339--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.TypeEmplacement] is being defaulted to: TYPEEMPLACEMENT.
-[EL Config]: 2012-03-28 11:44:02.339--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idType] is being defaulted to: IDTYPE.
-[EL Config]: 2012-03-28 11:44:02.339--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field pronfondeur] is being defaulted to: PRONFONDEUR.
-[EL Config]: 2012-03-28 11:44:02.34--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field largeur] is being defaulted to: LARGEUR.
-[EL Config]: 2012-03-28 11:44:02.34--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field longueur] is being defaulted to: LONGUEUR.
-[EL Config]: 2012-03-28 11:44:02.34--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Ponton] is being defaulted to: Ponton.
-[EL Config]: 2012-03-28 11:44:02.34--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Ponton] is being defaulted to: PONTON.
-[EL Config]: 2012-03-28 11:44:02.34--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idPonton] is being defaulted to: IDPONTON.
-[EL Config]: 2012-03-28 11:44:02.34--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field bassin] is being defaulted to: BASSIN.
-[EL Config]: 2012-03-28 11:44:02.341--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field reserve] is being defaulted to: RESERVE.
-[EL Config]: 2012-03-28 11:44:02.341--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field ponton] is being defaulted to: PONTON.
-[EL Config]: 2012-03-28 11:44:02.341--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Port] is being defaulted to: Port.
-[EL Config]: 2012-03-28 11:44:02.341--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Port] is being defaulted to: PORT.
-[EL Config]: 2012-03-28 11:44:02.341--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field code] is being defaulted to: CODE.
-[EL Config]: 2012-03-28 11:44:02.342--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nom] is being defaulted to: NOM.
-[EL Config]: 2012-03-28 11:44:02.342--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Proprietaire] is being defaulted to: Proprietaire.
-[EL Config]: 2012-03-28 11:44:02.342--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Proprietaire] is being defaulted to: PROPRIETAIRE.
-[EL Config]: 2012-03-28 11:44:02.342--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field adresse] is being defaulted to: ADRESSE.
-[EL Config]: 2012-03-28 11:44:02.342--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idProprietaire] is being defaulted to: IDPROPRIETAIRE.
-[EL Config]: 2012-03-28 11:44:02.342--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field telephone] is being defaulted to: TELEPHONE.
-[EL Config]: 2012-03-28 11:44:02.343--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nom] is being defaulted to: NOM.
-[EL Config]: 2012-03-28 11:44:02.343--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Occuper] is being defaulted to: Occuper.
-[EL Config]: 2012-03-28 11:44:02.343--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Occuper] is being defaulted to: OCCUPER.
-[EL Config]: 2012-03-28 11:44:02.343--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field Duree] is being defaulted to: DUREE.
-[EL Config]: 2012-03-28 11:44:02.343--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateDebut] is being defaulted to: DATEDEBUT.
-[EL Config]: 2012-03-28 11:44:02.344--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Modele] is being defaulted to: Modele.
-[EL Config]: 2012-03-28 11:44:02.344--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Modele] is being defaulted to: MODELE.
-[EL Config]: 2012-03-28 11:44:02.344--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field serie] is being defaulted to: SERIE.
-[EL Config]: 2012-03-28 11:44:02.344--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field largeur] is being defaulted to: LARGEUR.
-[EL Config]: 2012-03-28 11:44:02.344--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idModele] is being defaulted to: IDMODELE.
-[EL Config]: 2012-03-28 11:44:02.344--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field constructeur] is being defaulted to: CONSTRUCTEUR.
-[EL Config]: 2012-03-28 11:44:02.345--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field tirant] is being defaulted to: TIRANT.
-[EL Config]: 2012-03-28 11:44:02.345--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field longueur] is being defaulted to: LONGUEUR.
-[EL Config]: 2012-03-28 11:44:02.345--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field type] is being defaulted to: TYPE.
-[EL Config]: 2012-03-28 11:44:02.345--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Emplacement] is being defaulted to: Emplacement.
-[EL Config]: 2012-03-28 11:44:02.345--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Emplacement] is being defaulted to: EMPLACEMENT.
-[EL Config]: 2012-03-28 11:44:02.346--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field numeroEmplacement] is being defaulted to: NUMEROEMPLACEMENT.
-[EL Config]: 2012-03-28 11:44:02.372--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field resident] is being defaulted to: IDBATEAU.
-[EL Config]: 2012-03-28 11:44:02.373--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field resident] is being defaulted to: RESIDENT_IDBATEAU.
-[EL Config]: 2012-03-28 11:44:02.373--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field ponton] is being defaulted to: IDPONTON.
-[EL Config]: 2012-03-28 11:44:02.373--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field ponton] is being defaulted to: PONTON_IDPONTON.
-[EL Config]: 2012-03-28 11:44:02.374--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field resident] is being defaulted to: IDBATEAU.
-[EL Config]: 2012-03-28 11:44:02.374--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field resident] is being defaulted to: RESIDENT_IDBATEAU.
-[EL Config]: 2012-03-28 11:44:02.374--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field passager] is being defaulted to: IDBATEAU.
-[EL Config]: 2012-03-28 11:44:02.374--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field passager] is being defaulted to: PASSAGER_IDBATEAU.
-[EL Config]: 2012-03-28 11:44:02.378--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field portOrigine] is being defaulted to: CODE.
-[EL Config]: 2012-03-28 11:44:02.378--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field portOrigine] is being defaulted to: PORTORIGINE_CODE.
-[EL Config]: 2012-03-28 11:44:02.378--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field proprietaire] is being defaulted to: IDPROPRIETAIRE.
-[EL Config]: 2012-03-28 11:44:02.378--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field proprietaire] is being defaulted to: PROPRIETAIRE_IDPROPRIETAIRE.
-[EL Config]: 2012-03-28 11:44:02.378--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field type] is being defaulted to: IDTYPE.
-[EL Config]: 2012-03-28 11:44:02.379--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field type] is being defaulted to: TYPE_IDTYPE.
-[EL Config]: 2012-03-28 11:44:02.379--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field destination] is being defaulted to: CODE.
-[EL Config]: 2012-03-28 11:44:02.379--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field destination] is being defaulted to: DESTINATION_CODE.
-[EL Config]: 2012-03-28 11:44:02.379--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field modele] is being defaulted to: IDMODELE.
-[EL Config]: 2012-03-28 11:44:02.379--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field modele] is being defaulted to: MODELE_IDMODELE.
-[EL Config]: 2012-03-28 11:44:02.38--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field provenance] is being defaulted to: CODE.
-[EL Config]: 2012-03-28 11:44:02.38--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field provenance] is being defaulted to: PROVENANCE_CODE.
-[EL Info]: 2012-03-28 11:44:03.061--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.2.0.v20110202-r8913
-[EL Fine]: 2012-03-28 11:44:03.413--Thread(Thread[AWT-EventQueue-0,6,main])--Detected Vendor platform: org.eclipse.persistence.platform.database.MySQLPlatform
-[EL Config]: 2012-03-28 11:44:03.43--ServerSession(20863188)--Connection(29247351)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
+[EL Config]: 2012-03-28 17:08:27.562--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Stationner] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.562--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field passager] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field passager] is being defaulted to: class fr.badgers.model.Passager.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field emplacement] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field emplacement] is being defaulted to: class fr.badgers.model.Emplacement.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Sortir] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field resident] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field resident] is being defaulted to: class fr.badgers.model.Resident.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Bateau] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field proprietaire] is being defaulted to: class fr.badgers.model.Proprietaire.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field modele] is being defaulted to: class fr.badgers.model.Modele.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field portOrigine] is being defaulted to: class fr.badgers.model.Port.
+[EL Config]: 2012-03-28 17:08:27.593--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Resident] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Passager] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field provenance] is being defaulted to: class fr.badgers.model.Port.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field destination] is being defaulted to: class fr.badgers.model.Port.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.TypeEmplacement] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Ponton] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Port] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Proprietaire] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Occuper] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field emplacement] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field emplacement] is being defaulted to: class fr.badgers.model.Emplacement.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field resident] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field resident] is being defaulted to: class fr.badgers.model.Resident.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Modele] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class fr.badgers.model.Emplacement] is set to [FIELD].
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field type] is being defaulted to: class fr.badgers.model.TypeEmplacement.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The element [field ponton] is being defaulted to a one to one mapping.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field ponton] is being defaulted to: class fr.badgers.model.Ponton.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Stationner] is being defaulted to: Stationner.
+[EL Config]: 2012-03-28 17:08:27.609--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Stationner] is being defaulted to: STATIONNER.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateDebut] is being defaulted to: DATEDEBUT.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Sortir] is being defaulted to: Sortir.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Sortir] is being defaulted to: SORTIR.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateRetourReel] is being defaulted to: DATERETOURREEL.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateDebut] is being defaulted to: DATEDEBUT.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateRetourPrevu] is being defaulted to: DATERETOURPREVU.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Resident] is being defaulted to: Resident.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Bateau] is being defaulted to: Bateau.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Bateau] is being defaulted to: BATEAU.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field assurance] is being defaulted to: ASSURANCE.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idBateau] is being defaulted to: IDBATEAU.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nomBateau] is being defaulted to: NOMBATEAU.
+[EL Config]: 2012-03-28 17:08:27.625--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field numeroSerie] is being defaulted to: NUMEROSERIE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The discriminator column name for the root inheritance class [class fr.badgers.model.Bateau] is being defaulted to: DTYPE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Passager] is being defaulted to: Passager.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.TypeEmplacement] is being defaulted to: TypeEmplacement.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.TypeEmplacement] is being defaulted to: TYPEEMPLACEMENT.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idType] is being defaulted to: IDTYPE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field pronfondeur] is being defaulted to: PRONFONDEUR.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field largeur] is being defaulted to: LARGEUR.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field longueur] is being defaulted to: LONGUEUR.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Ponton] is being defaulted to: Ponton.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Ponton] is being defaulted to: PONTON.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idPonton] is being defaulted to: IDPONTON.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field bassin] is being defaulted to: BASSIN.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field reserve] is being defaulted to: RESERVE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field ponton] is being defaulted to: PONTON.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Port] is being defaulted to: Port.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Port] is being defaulted to: PORT.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field code] is being defaulted to: CODE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nom] is being defaulted to: NOM.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Proprietaire] is being defaulted to: Proprietaire.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Proprietaire] is being defaulted to: PROPRIETAIRE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field adresse] is being defaulted to: ADRESSE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idProprietaire] is being defaulted to: IDPROPRIETAIRE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field telephone] is being defaulted to: TELEPHONE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field nom] is being defaulted to: NOM.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Occuper] is being defaulted to: Occuper.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Occuper] is being defaulted to: OCCUPER.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field Duree] is being defaulted to: DUREE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field dateDebut] is being defaulted to: DATEDEBUT.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Modele] is being defaulted to: Modele.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Modele] is being defaulted to: MODELE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field serie] is being defaulted to: SERIE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field largeur] is being defaulted to: LARGEUR.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field idModele] is being defaulted to: IDMODELE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field constructeur] is being defaulted to: CONSTRUCTEUR.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field tirant] is being defaulted to: TIRANT.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field longueur] is being defaulted to: LONGUEUR.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field type] is being defaulted to: TYPE.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class fr.badgers.model.Emplacement] is being defaulted to: Emplacement.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class fr.badgers.model.Emplacement] is being defaulted to: EMPLACEMENT.
+[EL Config]: 2012-03-28 17:08:27.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [field numeroEmplacement] is being defaulted to: NUMEROEMPLACEMENT.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field resident] is being defaulted to: IDBATEAU.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field resident] is being defaulted to: RESIDENT_IDBATEAU.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field ponton] is being defaulted to: IDPONTON.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field ponton] is being defaulted to: PONTON_IDPONTON.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field resident] is being defaulted to: IDBATEAU.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field resident] is being defaulted to: RESIDENT_IDBATEAU.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field passager] is being defaulted to: IDBATEAU.
+[EL Config]: 2012-03-28 17:08:27.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field passager] is being defaulted to: PASSAGER_IDBATEAU.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field modele] is being defaulted to: IDMODELE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field modele] is being defaulted to: MODELE_IDMODELE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field portOrigine] is being defaulted to: CODE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field portOrigine] is being defaulted to: PORTORIGINE_CODE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field destination] is being defaulted to: CODE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field destination] is being defaulted to: DESTINATION_CODE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field provenance] is being defaulted to: CODE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field provenance] is being defaulted to: PROVENANCE_CODE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field type] is being defaulted to: IDTYPE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field type] is being defaulted to: TYPE_IDTYPE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field proprietaire] is being defaulted to: IDPROPRIETAIRE.
+[EL Config]: 2012-03-28 17:08:27.671--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [field proprietaire] is being defaulted to: PROPRIETAIRE_IDPROPRIETAIRE.
+[EL Info]: 2012-03-28 17:08:28.031--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.2.0.v20110202-r8913
+[EL Fine]: 2012-03-28 17:08:28.671--Thread(Thread[AWT-EventQueue-0,6,main])--Detected Vendor platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: 2012-03-28 17:08:28.687--ServerSession(14923925)--Connection(21648882)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
 	platform=>MySQLPlatform
 	user name=> "twix"
 	datasource URL=> "jdbc:mysql://88.190.232.239:3306/jpa"
 ))
-[EL Config]: 2012-03-28 11:44:03.567--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:mysql://88.190.232.239:3306/jpa
-	User: twix@d163.iut.univ-aix.fr
+[EL Config]: 2012-03-28 17:08:29.218--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:mysql://88.190.232.239:3306/jpa
+	User: twix@86.66.227.139
 	Database: MySQL  Version: 5.5.21-log
 	Driver: MySQL-AB JDBC Driver  Version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
-[EL Info]: 2012-03-28 11:44:03.639--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--file:/home/batyan/workspace/GP/target/classes/_GP login successful
-[EL Fine]: 2012-03-28 11:44:03.663--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE BATEAU (IDBATEAU INTEGER NOT NULL, DTYPE VARCHAR(31), ASSURANCE VARCHAR(255), NOMBATEAU VARCHAR(255), NUMEROSERIE INTEGER, MODELE_IDMODELE INTEGER, PORTORIGINE_CODE VARCHAR(2), PROPRIETAIRE_IDPROPRIETAIRE INTEGER, DESTINATION_CODE VARCHAR(2), PROVENANCE_CODE VARCHAR(2), PRIMARY KEY (IDBATEAU))
-[EL Fine]: 2012-03-28 11:44:03.697--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.71--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2012-03-28 17:08:29.281--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--file:/E:/Documents and Settings/Yann/workspace/GP/target/classes/_GP login successful
+[EL Fine]: 2012-03-28 17:08:29.296--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE BATEAU (IDBATEAU INTEGER NOT NULL, DTYPE VARCHAR(31), ASSURANCE VARCHAR(255), NOMBATEAU VARCHAR(255), NUMEROSERIE INTEGER, MODELE_IDMODELE INTEGER, PORTORIGINE_CODE VARCHAR(2), PROPRIETAIRE_IDPROPRIETAIRE INTEGER, DESTINATION_CODE VARCHAR(2), PROVENANCE_CODE VARCHAR(2), PRIMARY KEY (IDBATEAU))
+[EL Fine]: 2012-03-28 17:08:29.359--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:29.437--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'BATEAU' already exists
 Error Code: 1050
 Call: CREATE TABLE BATEAU (IDBATEAU INTEGER NOT NULL, DTYPE VARCHAR(31), ASSURANCE VARCHAR(255), NOMBATEAU VARCHAR(255), NUMEROSERIE INTEGER, MODELE_IDMODELE INTEGER, PORTORIGINE_CODE VARCHAR(2), PROPRIETAIRE_IDPROPRIETAIRE INTEGER, DESTINATION_CODE VARCHAR(2), PROVENANCE_CODE VARCHAR(2), PRIMARY KEY (IDBATEAU))
 Query: DataModifyQuery(sql="CREATE TABLE BATEAU (IDBATEAU INTEGER NOT NULL, DTYPE VARCHAR(31), ASSURANCE VARCHAR(255), NOMBATEAU VARCHAR(255), NUMEROSERIE INTEGER, MODELE_IDMODELE INTEGER, PORTORIGINE_CODE VARCHAR(2), PROPRIETAIRE_IDPROPRIETAIRE INTEGER, DESTINATION_CODE VARCHAR(2), PROVENANCE_CODE VARCHAR(2), PRIMARY KEY (IDBATEAU))")
-[EL Fine]: 2012-03-28 11:44:03.712--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE EMPLACEMENT (NUMEROEMPLACEMENT INTEGER NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, TYPE_IDTYPE INTEGER, PRIMARY KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON))
-[EL Fine]: 2012-03-28 11:44:03.725--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.737--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:29.437--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE EMPLACEMENT (NUMEROEMPLACEMENT INTEGER NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, TYPE_IDTYPE INTEGER, PRIMARY KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON))
+[EL Fine]: 2012-03-28 17:08:29.515--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:29.578--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'EMPLACEMENT' already exists
 Error Code: 1050
 Call: CREATE TABLE EMPLACEMENT (NUMEROEMPLACEMENT INTEGER NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, TYPE_IDTYPE INTEGER, PRIMARY KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON))
 Query: DataModifyQuery(sql="CREATE TABLE EMPLACEMENT (NUMEROEMPLACEMENT INTEGER NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, TYPE_IDTYPE INTEGER, PRIMARY KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON))")
-[EL Fine]: 2012-03-28 11:44:03.737--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE MODELE (IDMODELE INTEGER NOT NULL, CONSTRUCTEUR VARCHAR(255), LARGEUR INTEGER, LONGUEUR INTEGER, SERIE VARCHAR(255), TIRANT INTEGER, TYPE VARCHAR(255), PRIMARY KEY (IDMODELE))
-[EL Fine]: 2012-03-28 11:44:03.749--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.762--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:29.578--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE MODELE (IDMODELE INTEGER NOT NULL, CONSTRUCTEUR VARCHAR(255), LARGEUR INTEGER, LONGUEUR INTEGER, SERIE VARCHAR(255), TIRANT INTEGER, TYPE VARCHAR(255), PRIMARY KEY (IDMODELE))
+[EL Fine]: 2012-03-28 17:08:29.656--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:29.734--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'MODELE' already exists
 Error Code: 1050
 Call: CREATE TABLE MODELE (IDMODELE INTEGER NOT NULL, CONSTRUCTEUR VARCHAR(255), LARGEUR INTEGER, LONGUEUR INTEGER, SERIE VARCHAR(255), TIRANT INTEGER, TYPE VARCHAR(255), PRIMARY KEY (IDMODELE))
 Query: DataModifyQuery(sql="CREATE TABLE MODELE (IDMODELE INTEGER NOT NULL, CONSTRUCTEUR VARCHAR(255), LARGEUR INTEGER, LONGUEUR INTEGER, SERIE VARCHAR(255), TIRANT INTEGER, TYPE VARCHAR(255), PRIMARY KEY (IDMODELE))")
-[EL Fine]: 2012-03-28 11:44:03.762--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE OCCUPER (DATEDEBUT DATE NOT NULL, DUREE INTEGER, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, RESIDENT_IDBATEAU))
-[EL Fine]: 2012-03-28 11:44:03.774--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.787--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:29.734--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE OCCUPER (DATEDEBUT DATE NOT NULL, DUREE INTEGER, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, RESIDENT_IDBATEAU))
+[EL Fine]: 2012-03-28 17:08:29.781--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:29.843--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'OCCUPER' already exists
 Error Code: 1050
 Call: CREATE TABLE OCCUPER (DATEDEBUT DATE NOT NULL, DUREE INTEGER, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, RESIDENT_IDBATEAU))
 Query: DataModifyQuery(sql="CREATE TABLE OCCUPER (DATEDEBUT DATE NOT NULL, DUREE INTEGER, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, RESIDENT_IDBATEAU))")
-[EL Fine]: 2012-03-28 11:44:03.787--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE PONTON (IDPONTON INTEGER NOT NULL, BASSIN VARCHAR(255), PONTON VARCHAR(255), RESERVE TINYINT(1) default 0, PRIMARY KEY (IDPONTON))
-[EL Fine]: 2012-03-28 11:44:03.8--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.812--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:29.843--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE PONTON (IDPONTON INTEGER NOT NULL, BASSIN VARCHAR(255), PONTON VARCHAR(255), RESERVE TINYINT(1) default 0, PRIMARY KEY (IDPONTON))
+[EL Fine]: 2012-03-28 17:08:29.906--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:29.968--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'PONTON' already exists
 Error Code: 1050
 Call: CREATE TABLE PONTON (IDPONTON INTEGER NOT NULL, BASSIN VARCHAR(255), PONTON VARCHAR(255), RESERVE TINYINT(1) default 0, PRIMARY KEY (IDPONTON))
 Query: DataModifyQuery(sql="CREATE TABLE PONTON (IDPONTON INTEGER NOT NULL, BASSIN VARCHAR(255), PONTON VARCHAR(255), RESERVE TINYINT(1) default 0, PRIMARY KEY (IDPONTON))")
-[EL Fine]: 2012-03-28 11:44:03.812--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE PORT (CODE VARCHAR(2) NOT NULL, NOM VARCHAR(255), PRIMARY KEY (CODE))
-[EL Fine]: 2012-03-28 11:44:03.825--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.838--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:29.968--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE PORT (CODE VARCHAR(2) NOT NULL, NOM VARCHAR(255), PRIMARY KEY (CODE))
+[EL Fine]: 2012-03-28 17:08:30.015--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:30.062--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'PORT' already exists
 Error Code: 1050
 Call: CREATE TABLE PORT (CODE VARCHAR(2) NOT NULL, NOM VARCHAR(255), PRIMARY KEY (CODE))
 Query: DataModifyQuery(sql="CREATE TABLE PORT (CODE VARCHAR(2) NOT NULL, NOM VARCHAR(255), PRIMARY KEY (CODE))")
-[EL Fine]: 2012-03-28 11:44:03.838--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE PROPRIETAIRE (IDPROPRIETAIRE INTEGER NOT NULL, ADRESSE VARCHAR(255), NOM VARCHAR(255), TELEPHONE VARCHAR(255), PRIMARY KEY (IDPROPRIETAIRE))
-[EL Fine]: 2012-03-28 11:44:03.851--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.863--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:30.062--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE PROPRIETAIRE (IDPROPRIETAIRE INTEGER NOT NULL, ADRESSE VARCHAR(255), NOM VARCHAR(255), TELEPHONE VARCHAR(255), PRIMARY KEY (IDPROPRIETAIRE))
+[EL Fine]: 2012-03-28 17:08:30.093--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:30.14--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'PROPRIETAIRE' already exists
 Error Code: 1050
 Call: CREATE TABLE PROPRIETAIRE (IDPROPRIETAIRE INTEGER NOT NULL, ADRESSE VARCHAR(255), NOM VARCHAR(255), TELEPHONE VARCHAR(255), PRIMARY KEY (IDPROPRIETAIRE))
 Query: DataModifyQuery(sql="CREATE TABLE PROPRIETAIRE (IDPROPRIETAIRE INTEGER NOT NULL, ADRESSE VARCHAR(255), NOM VARCHAR(255), TELEPHONE VARCHAR(255), PRIMARY KEY (IDPROPRIETAIRE))")
-[EL Fine]: 2012-03-28 11:44:03.863--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE SORTIR (DATEDEBUT DATE NOT NULL, DATERETOURPREVU DATE, DATERETOURREEL DATE, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, RESIDENT_IDBATEAU))
-[EL Fine]: 2012-03-28 11:44:03.876--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.889--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:30.14--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE SORTIR (DATEDEBUT DATE NOT NULL, DATERETOURPREVU DATE, DATERETOURREEL DATE, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, RESIDENT_IDBATEAU))
+[EL Fine]: 2012-03-28 17:08:30.187--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:30.25--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'SORTIR' already exists
 Error Code: 1050
 Call: CREATE TABLE SORTIR (DATEDEBUT DATE NOT NULL, DATERETOURPREVU DATE, DATERETOURREEL DATE, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, RESIDENT_IDBATEAU))
 Query: DataModifyQuery(sql="CREATE TABLE SORTIR (DATEDEBUT DATE NOT NULL, DATERETOURPREVU DATE, DATERETOURREEL DATE, RESIDENT_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, RESIDENT_IDBATEAU))")
-[EL Fine]: 2012-03-28 11:44:03.889--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE STATIONNER (DATEDEBUT DATE NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, PASSAGER_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, PASSAGER_IDBATEAU))
-[EL Fine]: 2012-03-28 11:44:03.902--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.915--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:30.25--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE STATIONNER (DATEDEBUT DATE NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, PASSAGER_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, PASSAGER_IDBATEAU))
+[EL Fine]: 2012-03-28 17:08:30.296--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:30.343--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'STATIONNER' already exists
 Error Code: 1050
 Call: CREATE TABLE STATIONNER (DATEDEBUT DATE NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, PASSAGER_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, PASSAGER_IDBATEAU))
 Query: DataModifyQuery(sql="CREATE TABLE STATIONNER (DATEDEBUT DATE NOT NULL, PONTON_IDPONTON INTEGER NOT NULL, NUMEROEMPLACEMENT INTEGER NOT NULL, PASSAGER_IDBATEAU INTEGER NOT NULL, PRIMARY KEY (DATEDEBUT, PONTON_IDPONTON, NUMEROEMPLACEMENT, PASSAGER_IDBATEAU))")
-[EL Fine]: 2012-03-28 11:44:03.915--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE TYPEEMPLACEMENT (IDTYPE INTEGER NOT NULL, LARGEUR INTEGER, LONGUEUR INTEGER, PRONFONDEUR INTEGER, PRIMARY KEY (IDTYPE))
-[EL Fine]: 2012-03-28 11:44:03.927--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:03.94--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:30.343--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE TYPEEMPLACEMENT (IDTYPE INTEGER NOT NULL, LARGEUR INTEGER, LONGUEUR INTEGER, PRONFONDEUR INTEGER, PRIMARY KEY (IDTYPE))
+[EL Fine]: 2012-03-28 17:08:30.531--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:30.64--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'TYPEEMPLACEMENT' already exists
 Error Code: 1050
 Call: CREATE TABLE TYPEEMPLACEMENT (IDTYPE INTEGER NOT NULL, LARGEUR INTEGER, LONGUEUR INTEGER, PRONFONDEUR INTEGER, PRIMARY KEY (IDTYPE))
 Query: DataModifyQuery(sql="CREATE TABLE TYPEEMPLACEMENT (IDTYPE INTEGER NOT NULL, LARGEUR INTEGER, LONGUEUR INTEGER, PRONFONDEUR INTEGER, PRIMARY KEY (IDTYPE))")
-[EL Fine]: 2012-03-28 11:44:03.94--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE BATEAU ADD CONSTRAINT FK_BATEAU_PROPRIETAIRE_IDPROPRIETAIRE FOREIGN KEY (PROPRIETAIRE_IDPROPRIETAIRE) REFERENCES PROPRIETAIRE (IDPROPRIETAIRE)
-[EL Fine]: 2012-03-28 11:44:04.966--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:04.979--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a3' (errno: 121)
+[EL Fine]: 2012-03-28 17:08:30.64--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE BATEAU ADD CONSTRAINT FK_BATEAU_PROPRIETAIRE_IDPROPRIETAIRE FOREIGN KEY (PROPRIETAIRE_IDPROPRIETAIRE) REFERENCES PROPRIETAIRE (IDPROPRIETAIRE)
+[EL Fine]: 2012-03-28 17:08:32.812--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:32.859--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a8' (errno: 121)
 Error Code: 1005
 Call: ALTER TABLE BATEAU ADD CONSTRAINT FK_BATEAU_PROPRIETAIRE_IDPROPRIETAIRE FOREIGN KEY (PROPRIETAIRE_IDPROPRIETAIRE) REFERENCES PROPRIETAIRE (IDPROPRIETAIRE)
 Query: DataModifyQuery(sql="ALTER TABLE BATEAU ADD CONSTRAINT FK_BATEAU_PROPRIETAIRE_IDPROPRIETAIRE FOREIGN KEY (PROPRIETAIRE_IDPROPRIETAIRE) REFERENCES PROPRIETAIRE (IDPROPRIETAIRE)")
-[EL Fine]: 2012-03-28 11:44:04.979--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE EMPLACEMENT ADD CONSTRAINT FK_EMPLACEMENT_PONTON_IDPONTON FOREIGN KEY (PONTON_IDPONTON) REFERENCES PONTON (IDPONTON)
-[EL Fine]: 2012-03-28 11:44:04.992--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:05.005--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:32.859--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE EMPLACEMENT ADD CONSTRAINT FK_EMPLACEMENT_PONTON_IDPONTON FOREIGN KEY (PONTON_IDPONTON) REFERENCES PONTON (IDPONTON)
+[EL Fine]: 2012-03-28 17:08:32.921--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:32.968--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Key column 'PONTON_IDPONTON' doesn't exist in table
 Error Code: 1072
 Call: ALTER TABLE EMPLACEMENT ADD CONSTRAINT FK_EMPLACEMENT_PONTON_IDPONTON FOREIGN KEY (PONTON_IDPONTON) REFERENCES PONTON (IDPONTON)
 Query: DataModifyQuery(sql="ALTER TABLE EMPLACEMENT ADD CONSTRAINT FK_EMPLACEMENT_PONTON_IDPONTON FOREIGN KEY (PONTON_IDPONTON) REFERENCES PONTON (IDPONTON)")
-[EL Fine]: 2012-03-28 11:44:05.005--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE OCCUPER ADD CONSTRAINT FK_OCCUPER_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)
-[EL Fine]: 2012-03-28 11:44:05.31--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:05.322--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a3' (errno: 121)
+[EL Fine]: 2012-03-28 17:08:32.968--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE OCCUPER ADD CONSTRAINT FK_OCCUPER_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)
+[EL Fine]: 2012-03-28 17:08:34.015--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:34.062--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a8' (errno: 121)
 Error Code: 1005
 Call: ALTER TABLE OCCUPER ADD CONSTRAINT FK_OCCUPER_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)
 Query: DataModifyQuery(sql="ALTER TABLE OCCUPER ADD CONSTRAINT FK_OCCUPER_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)")
-[EL Fine]: 2012-03-28 11:44:05.322--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE SORTIR ADD CONSTRAINT FK_SORTIR_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)
-[EL Fine]: 2012-03-28 11:44:05.803--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:05.815--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a3' (errno: 121)
+[EL Fine]: 2012-03-28 17:08:34.062--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE SORTIR ADD CONSTRAINT FK_SORTIR_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)
+[EL Fine]: 2012-03-28 17:08:35.046--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:35.093--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a8' (errno: 121)
 Error Code: 1005
 Call: ALTER TABLE SORTIR ADD CONSTRAINT FK_SORTIR_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)
 Query: DataModifyQuery(sql="ALTER TABLE SORTIR ADD CONSTRAINT FK_SORTIR_RESIDENT_IDBATEAU FOREIGN KEY (RESIDENT_IDBATEAU) REFERENCES BATEAU (IDBATEAU)")
-[EL Fine]: 2012-03-28 11:44:05.816--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE STATIONNER ADD CONSTRAINT FK_STATIONNER_NUMEROEMPLACEMENT FOREIGN KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON) REFERENCES EMPLACEMENT (NUMEROEMPLACEMENT, PONTON_IDPONTON)
-[EL Fine]: 2012-03-28 11:44:06.372--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:06.385--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a3' (errno: 150)
+[EL Fine]: 2012-03-28 17:08:35.093--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--ALTER TABLE STATIONNER ADD CONSTRAINT FK_STATIONNER_NUMEROEMPLACEMENT FOREIGN KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON) REFERENCES EMPLACEMENT (NUMEROEMPLACEMENT, PONTON_IDPONTON)
+[EL Fine]: 2012-03-28 17:08:35.89--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:35.921--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Can't create table 'jpa.#sql-19b_3a8' (errno: 150)
 Error Code: 1005
 Call: ALTER TABLE STATIONNER ADD CONSTRAINT FK_STATIONNER_NUMEROEMPLACEMENT FOREIGN KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON) REFERENCES EMPLACEMENT (NUMEROEMPLACEMENT, PONTON_IDPONTON)
 Query: DataModifyQuery(sql="ALTER TABLE STATIONNER ADD CONSTRAINT FK_STATIONNER_NUMEROEMPLACEMENT FOREIGN KEY (NUMEROEMPLACEMENT, PONTON_IDPONTON) REFERENCES EMPLACEMENT (NUMEROEMPLACEMENT, PONTON_IDPONTON)")
-[EL Fine]: 2012-03-28 11:44:06.386--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
-[EL Fine]: 2012-03-28 11:44:06.399--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
-[EL Warning]: 2012-03-28 11:44:06.411--ServerSession(20863188)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
+[EL Fine]: 2012-03-28 17:08:35.921--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+[EL Fine]: 2012-03-28 17:08:36.0--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1
+[EL Warning]: 2012-03-28 17:08:36.046--ServerSession(14923925)--Thread(Thread[AWT-EventQueue-0,6,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'SEQUENCE' already exists
 Error Code: 1050
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))")
-[EL Fine]: 2012-03-28 11:44:06.412--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT * FROM SEQUENCE WHERE SEQ_NAME = SEQ_GEN
-[EL Fine]: 2012-03-28 11:44:06.75--ServerSession(20863188)--Connection(20214052)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT IDPROPRIETAIRE, ADRESSE, NOM, TELEPHONE FROM PROPRIETAIRE
+[EL Fine]: 2012-03-28 17:08:36.046--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT * FROM SEQUENCE WHERE SEQ_NAME = SEQ_GEN
+[EL Fine]: 2012-03-28 17:08:36.39--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT IDPROPRIETAIRE, ADRESSE, NOM, TELEPHONE FROM PROPRIETAIRE
+[EL Fine]: 2012-03-28 17:08:36.437--ServerSession(14923925)--Connection(26156414)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT IDBATEAU, DTYPE, ASSURANCE, NOMBATEAU, NUMEROSERIE, MODELE_IDMODELE, PORTORIGINE_CODE, PROPRIETAIRE_IDPROPRIETAIRE, DESTINATION_CODE, PROVENANCE_CODE FROM BATEAU
