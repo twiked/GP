@@ -6,30 +6,30 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
-import fr.badgers.model.Bateau;
-import fr.badgers.model.dao.DAOBateau;
+import fr.badgers.model.Port;
+import fr.badgers.model.dao.DAOPort;
 
-public class DAOBateauJPA implements DAOBateau {
+public class DAOPortJPA implements DAOPort {
 
 	private EntityManager entityManager;
 
-	public DAOBateauJPA(EntityManager entityManager) {
+	public DAOPortJPA(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
 
-	public int computeNbBateau() {
+	public int computeNbPort() {
 		return 0;
 	}
 
-	public Bateau insert(Bateau obj) {
+	public Port insert(Port obj) {
 		EntityTransaction tx = entityManager.getTransaction();
 		tx.begin();
 		entityManager.persist(obj);
 		tx.commit();
-		return entityManager.find(Bateau.class, obj.getNumeroSerie());
+		return entityManager.find(Port.class, obj.getCode());
 	}
 
-	public boolean update(Bateau obj) {
+	public boolean update(Port obj) {
 		try {
 			EntityTransaction tx = entityManager.getTransaction();
 			tx.begin();
@@ -41,7 +41,7 @@ public class DAOBateauJPA implements DAOBateau {
 		}
 	}
 
-	public boolean delete(Bateau obj) {
+	public boolean delete(Port obj) {
 		try {
 			EntityTransaction tx = entityManager.getTransaction();
 			tx.begin();
@@ -53,13 +53,13 @@ public class DAOBateauJPA implements DAOBateau {
 		}
 	}
 
-	public Bateau getById(Integer id) {
-		return entityManager.find(Bateau.class, id);
+	public Port getById(Integer id) {
+		return entityManager.find(Port.class, id);
 	}
 
-	public List<Bateau> FindAll() {
-		TypedQuery<Bateau> query = entityManager.createNamedQuery(
-				"SELECT * FROM BATEAU", Bateau.class);
+	public List<Port> FindAll() {
+		TypedQuery<Port> query = entityManager.createNamedQuery(
+				"SELECT * FROM Port", Port.class);
 		return query.getResultList();
 	}
 

@@ -3,7 +3,6 @@ package fr.badgers.gui;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
-import java.awt.Label;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -21,11 +20,9 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JSplitPane;
 import javax.swing.SpinnerDateModel;
-import javax.swing.SpinnerModel;
-
 import fr.badgers.model.Proprietaire;
 import fr.badgers.model.dao.DAOProprietaire;
-import fr.badgers.model.dao.jpa.DAOProprietaireJPA;
+import fr.badgers.model.dao.jpa.DAOFactoryJPA;
 
 public class MainWindow {
 
@@ -67,17 +64,38 @@ public class MainWindow {
 		MainPanel mainpanel = new MainPanel();
 		frame.getContentPane().add(mainpanel);
 		
-		List<Proprietaire> proprietaires = DAOProprietaireJPA.FindAll();
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
+		EntityManager em = emf.createEntityManager();
+
+		DAOFactoryJPA daof = new DAOFactoryJPA(em);
+		DAOProprietaire daop = daof.createDAOProprietaire();
+		
+		List<Proprietaire> proprietaires = daop.FindAll();
+		
+		System.out.println(daop.FindAll());
+		
+		/*
+		 * Affectation tab
+		 */
 		
 		JPanel panel_1 = new JPanel();
 		mainpanel.addTab("Affectation", null, panel_1, null);
 		
+		/*
+		 * Statistiques tab
+		 */
+		
 		JPanel panel_2 = new JPanel();
 		mainpanel.addTab("Statistiques", null, panel_2, null);
 		
+		/*
+		 * Sorties tab
+		 */
+		
 		JPanel panel = new JPanel();
 		panel.setToolTipText("");
-		mainpanel.addTab("Sortie", null, panel, null);
+		mainpanel.addTab("Sorties", null, panel, null);
 		
 		JSplitPane splitPane_1 = new JSplitPane();
 		splitPane_1.setResizeWeight(0.5);
@@ -88,6 +106,10 @@ public class MainWindow {
 		panel.add(verticalStrut_1);
 		panel.add(splitPane_1);
 		
+		/*
+		 * Left panel
+		 */
+		
 		JPanel panel_3 = new JPanel();
 		splitPane_1.setLeftComponent(panel_3);
 		FlowLayout fl_panel_3 = new FlowLayout(FlowLayout.CENTER, 5, 5);
@@ -97,9 +119,12 @@ public class MainWindow {
 		panel_3.add(label);
 		
 		JComboBox comboBox_1 = new JComboBox();
-		for (int i = 0; i<proprietaires.size(); ++i)
+		
+		comboBox_1.addItem(proprietaires.get(0));
+		
+		for (Proprietaire p : proprietaires)
 		{
-			comboBox_1.addItem(proprietaires.get(i));
+			comboBox_1.addItem(p);
 		}
 		panel_3.add(comboBox_1);
 		comboBox_1.setToolTipText("Propriétaire");
@@ -118,6 +143,10 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
+		
+		/*
+		 * Right panel
+		 */
 		
 		JPanel panel_4 = new JPanel();
 		splitPane_1.setRightComponent(panel_4);

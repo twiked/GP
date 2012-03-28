@@ -9,57 +9,58 @@ import javax.persistence.TypedQuery;
 import fr.badgers.model.Proprietaire;
 import fr.badgers.model.dao.DAOProprietaire;
 
-public class DAOProprietaireJPA implements DAOProprietaire{
+public class DAOProprietaireJPA implements DAOProprietaire {
 
-		private EntityManager entityManager;
+	private EntityManager entityManager;
 
-		public DAOProprietaireJPA(EntityManager entityManager) {
+	public DAOProprietaireJPA(EntityManager entityManager) {
 		this.entityManager = entityManager;
-		}
+	}
 
-		public int computeNbProprietaire() {
+	public int computeNbProprietaire() {
 		return 0;
-		}
+	}
 
-		public Proprietaire insert(Proprietaire obj) {
+	public Proprietaire insert(Proprietaire obj) {
 		EntityTransaction tx = entityManager.getTransaction();
 		tx.begin();
 		entityManager.persist(obj);
 		tx.commit();
 		return entityManager.find(Proprietaire.class, obj.getIdProprietaire());
-		}
+	}
 
-		public boolean update(Proprietaire obj) {
+	public boolean update(Proprietaire obj) {
 		try {
-		EntityTransaction tx = entityManager.getTransaction();
-		tx.begin();
-		entityManager.merge(obj);
-		tx.commit();
-		return true;
+			EntityTransaction tx = entityManager.getTransaction();
+			tx.begin();
+			entityManager.merge(obj);
+			tx.commit();
+			return true;
 		} catch (Exception e) {
-		return false;
+			return false;
 		}
-		}
+	}
 
-		public boolean delete(Proprietaire obj) {
+	public boolean delete(Proprietaire obj) {
 		try {
-		EntityTransaction tx = entityManager.getTransaction();
-		tx.begin();
-		entityManager.remove(obj);
-		tx.commit();
-		return true;
+			EntityTransaction tx = entityManager.getTransaction();
+			tx.begin();
+			entityManager.remove(obj);
+			tx.commit();
+			return true;
 		} catch (Exception e) {
-		return false;
+			return false;
 		}
-		}
+	}
 
-		public Proprietaire getById(Integer id) {
+	public Proprietaire getById(Integer id) {
 		return entityManager.find(Proprietaire.class, id);
-		}
+	}
 
-		public List<Proprietaire> FindAll() {
-		TypedQuery<Proprietaire> query = entityManager.createNamedQuery("SELECT * FROM PROPRIETAIRE", Proprietaire.class);
+	public List<Proprietaire> FindAll() {
+		TypedQuery<Proprietaire> query = entityManager.createQuery(
+				"SELECT P FROM PROPRIETAIRE P", Proprietaire.class);
 		return query.getResultList();
-		}
+	}
 
 }

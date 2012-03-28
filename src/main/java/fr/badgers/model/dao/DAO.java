@@ -1,12 +1,5 @@
 package fr.badgers.model.dao;
 
-/*
-public class DAO {
-	
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("persUnit");
-	EntityManager em = emf.createEntityManager();
-}*/
-
 import java.util.List;
 
 public interface DAO<T, ID> {
@@ -19,14 +12,14 @@ public interface DAO<T, ID> {
 public boolean delete(T obj);
 
 /**
-* Permet de récupérer tous les objets d'une table
+* Permet de rï¿½cupï¿½rer tous les objets d'une table
 *
 * @return
 */
 public List<T> FindAll();
 
 /**
-* Permet de récupérer un objet via son ID
+* Permet de rï¿½cupï¿½rer un objet via son ID
 *
 * @param id
 * @return
@@ -34,15 +27,15 @@ public List<T> FindAll();
 public T getById(ID id);
 
 /**
-* Permet de créer une entrée dans la base de données par rapport à un objet
+* Permet de crï¿½er une entrï¿½e dans la base de donnï¿½es par rapport ï¿½ un objet
 *
 * @param obj
 */
 public T insert(T obj);
 
 /**
-* Permet de mettre à jour les données d'un tuple dans la base à partir d'un
-* objet passé en paramètre
+* Permet de mettre ï¿½ jour les donnï¿½es d'un tuple dans la base ï¿½ partir d'un
+* objet passï¿½ en paramï¿½tre
 *
 * @param obj
 */
