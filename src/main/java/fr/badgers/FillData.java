@@ -1,6 +1,7 @@
 package fr.badgers;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
@@ -12,6 +13,11 @@ import fr.badgers.model.Bateau;
 import fr.badgers.model.Modele;
 import fr.badgers.model.Port;
 import fr.badgers.model.Proprietaire;
+import fr.badgers.model.dao.DAOBateau;
+import fr.badgers.model.dao.DAOModele;
+import fr.badgers.model.dao.DAOPort;
+import fr.badgers.model.dao.DAOProprietaire;
+import fr.badgers.model.dao.jpa.DAOFactoryJPA;
 
 public class FillData {
 
@@ -23,6 +29,8 @@ public class FillData {
 				.createEntityManagerFactory("GP");
 				EntityManager em = emf.createEntityManager();
 		
+		DAOFactoryJPA daof = new DAOFactoryJPA(em);
+				
 		Random r = new Random();
 		List<Proprietaire> proprietaires = new ArrayList<Proprietaire>();
 		
@@ -31,20 +39,19 @@ public class FillData {
 		String[] names2 = {"ien", 	"lio", 	"mon", 	"nub", 	"zar", 	"bou", 	"hol", 
 							"sed", 	"lig", 	"", 	"by", 	"man"};
 		int stringLength = names1.length;
+		DAOProprietaire daopr = daof.createDAOProprietaire();
 		for (int i = 0; i<20; ++i)
 		{
-			em.getTransaction().begin();
 			Proprietaire p = new Proprietaire();
 			// We generate random numbers to fill the 
 			p.setNom(names1[r.nextInt(stringLength)] + names2[r.nextInt(stringLength)]);
 			p.setAdresse("Volrundd");
 			p.setTelephone(null);
-			em.persist(p);
-			em.getTransaction().commit();
+			daopr.insert(p);
 			proprietaires.add(p);
 		}
+		DAOPort daopo = daof.createDAOPort();
 		
-		em.getTransaction().begin();
 		Port p1 = new Port("AB");
 		p1.setNom("ArenaBui");
 		
@@ -56,10 +63,13 @@ public class FillData {
 		
 		Port p4 = new Port("SV");
 		p4.setNom("SandVich");
-		em.persist(p1);
-		em.persist(p2);
-		em.persist(p3);
-		em.persist(p4);
+		
+		daopo.insert(p1);
+		daopo.insert(p2);
+		daopo.insert(p3);
+		daopo.insert(p4);
+		
+		DAOModele daomo = daof.createDAOModele();
 		
 		Modele m1 = new Modele();
 		m1.setSerie("S600");
@@ -77,8 +87,10 @@ public class FillData {
 		m2.setTirant(8);
 		m2.setType("Ship");
 		
-		em.persist(m1);
-		em.persist(m2);
+		daomo.insert(m1);
+		daomo.insert(m2);
+		
+		DAOBateau daoba = daof.createDAOBateau();
 		
 		Bateau b1 = new Bateau();
 		b1.setAssurance("Nope");
@@ -86,6 +98,11 @@ public class FillData {
 		b1.setNomBateau("Helena");
 		b1.setPortOrigine(p1);
 		b1.setProprietaire(proprietaires.get(r.nextInt(proprietaires.size())));
+//		Proprietaire tempProp = proprietaires.get(r.nextInt(proprietaires.size()));
+//		b1.setProprietaire(tempProp);
+//		Collection<Bateau> bateaux = tempProp.getBateaux();
+//		bateaux.add(b1);
+//		tempProp.setBateaux(bateaux);
 		
 		Bateau b2 = new Bateau();
 		b2.setAssurance("Still nope");
@@ -93,6 +110,11 @@ public class FillData {
 		b2.setNomBateau("Amy");
 		b2.setPortOrigine(p2);
 		b2.setProprietaire(proprietaires.get(r.nextInt(proprietaires.size())));
+//		tempProp = proprietaires.get(r.nextInt(proprietaires.size()));
+//		b2.setProprietaire(tempProp);
+//		bateaux = tempProp.getBateaux();
+//		bateaux.add(b2);
+//		tempProp.setBateaux(bateaux);
 		
 		Bateau b3 = new Bateau();
 		b3.setAssurance("Not yet");
@@ -136,18 +158,14 @@ public class FillData {
 		b8.setPortOrigine(p4);
 		b8.setProprietaire(proprietaires.get(r.nextInt(proprietaires.size())));
 		
-		em.persist(b1);
-		em.persist(b2);
-		em.persist(b3);
-		em.persist(b4);
-		em.persist(b5);
-		em.persist(b6);
-		em.persist(b7);
-		em.persist(b8);
-		
-		em.getTransaction().commit();
-		
-		
+		daoba.insert(b1);
+		daoba.insert(b2);
+		daoba.insert(b3);
+		daoba.insert(b4);
+		daoba.insert(b5);
+		daoba.insert(b6);
+		daoba.insert(b7);
+		daoba.insert(b8);
 	}
 	
 	

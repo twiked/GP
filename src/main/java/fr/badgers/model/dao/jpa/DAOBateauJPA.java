@@ -62,5 +62,7 @@ public class DAOBateauJPA implements DAOBateau {
 				"SELECT B FROM Bateau B", Bateau.class);
 		return query.getResultList();
 	}
+	
+	
 
 }

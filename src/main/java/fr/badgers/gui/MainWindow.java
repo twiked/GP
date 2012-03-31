@@ -47,6 +47,7 @@ public class MainWindow {
 	// All boats
 	DAOBateau daob = daof.createDAOBateau();
 	List<Bateau> bateaux = daob.FindAll();
+	JSpinner spinner = null;
 
 	/**
 	 * Launch the application.
@@ -128,7 +129,7 @@ public class MainWindow {
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill comboBox_1 with proprietaires
 		currentProp = null;
-		comboBox_1.addItem("all");
+		comboBox_1.addItem("");
 		for (Proprietaire p : proprietaires) {
 			comboBox_1.addItem(p.getNom());
 		}
@@ -136,7 +137,7 @@ public class MainWindow {
 			public void actionPerformed(ActionEvent e) {
 				JComboBox box = (JComboBox) e.getSource();
 				for (Proprietaire prop : proprietaires) {
-					if (box.getSelectedItem().equals("all"))
+					if (box.getSelectedItem().equals(""))
 					{
 						currentProp = null;
 					}
@@ -150,16 +151,17 @@ public class MainWindow {
 		panel_3.add(comboBox_1);
 
 		JComboBox comboBox_2 = new JComboBox();
-		
-		comboBox_2.addItem("none");
+		comboBox_2.addItem("");
 		comboBox_2.setToolTipText("Bateau");
-		FillBoatComboBox(comboBox_2);
+		for (Bateau b : bateaux)
+		{
+			comboBox_2.addItem(b.getNomBateau());
+		}
 		comboBox_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JComboBox box = (JComboBox) e.getSource();
-				FillBoatComboBox(box);
 				for (Bateau bate : bateaux) {
-					if (box.getSelectedItem().equals("none"))
+					if (box.getSelectedItem().equals(""))
 					{
 						currentBoat = null;
 					}
@@ -171,8 +173,10 @@ public class MainWindow {
 		});
 		panel_3.add(comboBox_2);
 		
-		JSpinner spinner = new JSpinner(new SpinnerDateModel());
+		spinner = new JSpinner(new SpinnerDateModel());
 		panel_3.add(spinner);
+		
+		System.out.println(spinner.getValue());
 
 		/*
 		 * Lower panel
@@ -189,6 +193,11 @@ public class MainWindow {
 		btnConfirmEntre.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				System.out.println(currentProp);
+				System.out.println(currentBoat);
+				System.out.println(spinner.getValue());
+				
+				
 			}
 		});
 
@@ -208,17 +217,5 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
-	}
-	
-	public void FillBoatComboBox(JComboBox comboBox) {
-		comboBox.removeAll();
-		for (Bateau b : bateaux) {
-			if (currentProp == null
-					|| currentProp.equals(b.getProprietaire())) {
-				// If currentProp is null it means we are selecting all the
-				// boats!
-				comboBox.addItem(b.getNomBateau());
-			}
-		}
 	}
 }
