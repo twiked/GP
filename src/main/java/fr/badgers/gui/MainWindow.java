@@ -27,6 +27,11 @@ import fr.badgers.model.dao.DAOBateau;
 import fr.badgers.model.dao.DAOProprietaire;
 import fr.badgers.model.dao.jpa.DAOFactoryJPA;
 import java.awt.Dimension;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.factories.FormFactory;
+import com.jgoodies.forms.layout.RowSpec;
+import javax.swing.SpinnerModel;
 
 public class MainWindow {
 
@@ -123,8 +128,26 @@ public class MainWindow {
 
 		JPanel panel_3 = new JPanel();
 		splitPane_1.setLeftComponent(panel_3);
-		FlowLayout fl_panel_3 = new FlowLayout(FlowLayout.CENTER, 5, 5);
-		panel_3.setLayout(fl_panel_3);
+		panel_3.setLayout(new FormLayout(new ColumnSpec[] {
+				ColumnSpec.decode("77px"),
+				ColumnSpec.decode("28px"),
+				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
+				ColumnSpec.decode("28px"),
+				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
+				ColumnSpec.decode("20px"),
+				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
+				ColumnSpec.decode("87px"),
+				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
+				ColumnSpec.decode("98px"),},
+			new RowSpec[] {
+				FormFactory.LINE_GAP_ROWSPEC,
+				RowSpec.decode("20px"),
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,
+				FormFactory.RELATED_GAP_ROWSPEC,
+				FormFactory.DEFAULT_ROWSPEC,}));
 
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill comboBox_1 with proprietaires
@@ -148,7 +171,7 @@ public class MainWindow {
 			}
 		});
 		comboBox_1.setToolTipText("Propriétaire");
-		panel_3.add(comboBox_1);
+		panel_3.add(comboBox_1, "2, 2, left, top");
 
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.addItem("");
@@ -171,12 +194,19 @@ public class MainWindow {
 				}
 			}
 		});
-		panel_3.add(comboBox_2);
+		panel_3.add(comboBox_2, "4, 2, left, top");
+		
+		JLabel lblDateDepart = new JLabel("Date depart");
+		panel_3.add(lblDateDepart, "8, 4");
 		
 		spinner = new JSpinner(new SpinnerDateModel());
-		panel_3.add(spinner);
+		panel_3.add(spinner, "10, 4, left, top");
 		
-		System.out.println(spinner.getValue());
+		JLabel lblDateRetourPrevu = new JLabel("Date retour");
+		panel_3.add(lblDateRetourPrevu, "8, 6, left, center");
+		
+		JSpinner spinner_1 = new JSpinner(new SpinnerDateModel());
+		panel_3.add(spinner_1, "10, 6");
 
 		/*
 		 * Lower panel
@@ -184,9 +214,9 @@ public class MainWindow {
 
 		JPanel panel_4 = new JPanel();
 		splitPane_1.setRightComponent(panel_4);
-
-		JLabel label = new JLabel("Retour");
-		panel_4.add(label);
+		
+				JLabel label = new JLabel("Retour");
+				panel_4.add(label);
 
 		JButton btnConfirmEntre = new JButton("Confirmer retour");
 		panel_4.add(btnConfirmEntre);
@@ -196,8 +226,6 @@ public class MainWindow {
 				System.out.println(currentProp);
 				System.out.println(currentBoat);
 				System.out.println(spinner.getValue());
-				
-				
 			}
 		});
 
