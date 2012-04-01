@@ -15,9 +15,11 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.JSplitPane;
 import javax.swing.SpinnerDateModel;
+import javax.swing.SwingConstants;
 
 import com.jgoodies.forms.factories.FormFactory;
 import com.jgoodies.forms.layout.ColumnSpec;
@@ -65,29 +67,19 @@ public class Leave extends JPanel{
 		/*
 		 * Upper panel
 		 */
-
-		JSplitPane splitPane_1 = new JSplitPane();
-		splitPane_1.setResizeWeight(0.5);
-		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
-		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-
-		Component verticalStrut_1 = Box.createVerticalStrut(20);
-		this.add(verticalStrut_1);
-		this.add(splitPane_1);
+		JPanel upperPannel = new JPanel();
 		
-		JPanel panel_3 = new JPanel();
-		splitPane_1.setLeftComponent(panel_3);
-		panel_3.setLayout(new FormLayout(new ColumnSpec[] {
-				ColumnSpec.decode("77px"),
-				ColumnSpec.decode("28px"),
+		upperPannel.setLayout(new FormLayout(new ColumnSpec[] {
+				ColumnSpec.decode("40px"),
+				ColumnSpec.decode("90px"),
 				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
-				ColumnSpec.decode("28px"),
+				ColumnSpec.decode("90px"),
 				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
 				ColumnSpec.decode("20px"),
 				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
-				ColumnSpec.decode("87px"),
+				ColumnSpec.decode("95px"),
 				FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
-				ColumnSpec.decode("98px"),},
+				ColumnSpec.decode("110px"),},
 			new RowSpec[] {
 				FormFactory.LINE_GAP_ROWSPEC,
 				RowSpec.decode("20px"),
@@ -98,6 +90,10 @@ public class Leave extends JPanel{
 				FormFactory.RELATED_GAP_ROWSPEC,
 				FormFactory.DEFAULT_ROWSPEC,}));
 
+		
+		JLabel lblProprietaire = new JLabel("Propriétaire");
+		upperPannel.add(lblProprietaire, "2, 4");
+		
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill comboBox_1 with proprietaires
 		currentProp = null;
@@ -120,8 +116,11 @@ public class Leave extends JPanel{
 			}
 		});
 		comboBox_1.setToolTipText("Propriétaire");
-		panel_3.add(comboBox_1, "2, 2, left, top");
+		upperPannel.add(comboBox_1, "2, 2, default, default");
 
+		JLabel lblBateau = new JLabel("Bateau");
+		upperPannel.add(lblBateau, "4, 4");
+		
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.addItem("");
 		comboBox_2.setToolTipText("Bateau");
@@ -143,32 +142,42 @@ public class Leave extends JPanel{
 				}
 			}
 		});
-		panel_3.add(comboBox_2, "4, 2, left, top");
+		upperPannel.add(comboBox_2, "4, 2, left, top");
 		
 		JLabel lblDateDepart = new JLabel("Date depart");
-		panel_3.add(lblDateDepart, "8, 4");
+		upperPannel.add(lblDateDepart, "8, 4");
 		
 		spinner = new JSpinner(new SpinnerDateModel());
-		panel_3.add(spinner, "10, 4, left, top");
+		upperPannel.add(spinner, "10, 4, left, top");
 		
 		JLabel lblDateRetourPrevu = new JLabel("Date retour");
-		panel_3.add(lblDateRetourPrevu, "8, 6, left, center");
+		upperPannel.add(lblDateRetourPrevu, "8, 6, left, center");
 		
 		JSpinner spinner_1 = new JSpinner(new SpinnerDateModel());
-		panel_3.add(spinner_1, "10, 6");
+		upperPannel.add(spinner_1, "10, 6");
+
+		JSeparator splitPane_1 = new JSeparator(SwingConstants.HORIZONTAL);
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
+		Component verticalStrut_1 = Box.createVerticalStrut(20);
+		this.add(upperPannel);
+		this.add(verticalStrut_1);
+		this.add(splitPane_1);
+		
+		
+		
 
 		/*
 		 * Lower panel
 		 */
 
-		JPanel panel_4 = new JPanel();
-		splitPane_1.setRightComponent(panel_4);
+		JPanel lowerPanel = new JPanel();
 		
 				JLabel label = new JLabel("Retour");
-				panel_4.add(label);
+				lowerPanel.add(label);
 
 		JButton btnConfirmEntre = new JButton("Confirmer retour");
-		panel_4.add(btnConfirmEntre);
+		lowerPanel.add(btnConfirmEntre);
 		btnConfirmEntre.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -179,20 +188,21 @@ public class Leave extends JPanel{
 		});
 
 		Component rigidArea_1 = Box.createRigidArea(new Dimension(20, 20));
-		panel_4.add(rigidArea_1);
+		lowerPanel.add(rigidArea_1);
 
 		Component rigidArea = Box.createRigidArea(new Dimension(20, 20));
-		panel_4.add(rigidArea);
+		lowerPanel.add(rigidArea);
 
 		JButton btnConfirmSortie = new JButton("Confirmer sortie");
-		panel_4.add(btnConfirmSortie);
+		lowerPanel.add(btnConfirmSortie);
 
 		JLabel lblSortie = new JLabel("Sortie");
-		panel_4.add(lblSortie);
+		lowerPanel.add(lblSortie);
 		btnConfirmSortie.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
+		this.add(lowerPanel);
 	}
 }

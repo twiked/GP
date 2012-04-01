@@ -35,7 +35,7 @@ public class Statistics extends JPanel{
 		propPanel.add(propDisplay);
 		
 		JSeparator separ = new JSeparator(SwingConstants.HORIZONTAL);
-		separ.setPreferredSize(new Dimension(10,10));
+		// separ.setPreferredSize(new Dimension(10,10));
 		this.add(separ);
 		
 		JPanel boatPanel = new JPanel();
