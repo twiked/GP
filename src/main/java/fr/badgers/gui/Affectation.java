@@ -154,7 +154,7 @@ public class Affectation extends JPanel{
 					// Filling the rest of the informations
 					boat.setNomBateau(nameBoat.getText());
 					boat.setAssurance(insuBoat.getText());
-					boat.setNumeroSerie(Integer.parseInt(numBoat.getText()));
+					boat.setNumeroSerie(numBoat.getText());
 					boat.setModele((Modele) modelBoat.getSelectedItem());
 					boat.setPortOrigine((Port) portBoat.getSelectedItem());
 					boat.setProprietaire((Proprietaire) ownBoat.getSelectedItem());
