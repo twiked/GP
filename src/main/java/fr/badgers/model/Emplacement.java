@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
@@ -20,6 +21,7 @@ public class Emplacement implements Serializable {
     private Ponton ponton;
 
     @Id
+    @Column(name="NUMEMPL")
     private int numeroEmplacement;
 
     @ManyToOne

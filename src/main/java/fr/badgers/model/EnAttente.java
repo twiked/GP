@@ -12,7 +12,7 @@ public class EnAttente extends Bateau implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date dateDemande;
 	private int rang;
-	private int dureeOccupationPrevue;
+	private int duréeOccupationPrevue;
 
 	public EnAttente() {
 	}
@@ -37,12 +37,12 @@ public class EnAttente extends Bateau implements Serializable {
 		this.rang = rang;
 	}
 
-	public int getDureeOccupationPrevue() {
-		return dureeOccupationPrevue;
+	public int getDuréeOccupationPrevue() {
+		return duréeOccupationPrevue;
 	}
 
-	public void setDureeOccupationPrevue(int dureeOccupationPrevue) {
-		this.dureeOccupationPrevue = dureeOccupationPrevue;
+	public void setDuréeOccupationPrevue(int duréeOccupationPrevue) {
+		this.duréeOccupationPrevue = duréeOccupationPrevue;
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class EnAttente extends Bateau implements Serializable {
 		int result = super.hashCode();
 		result = prime * result
 				+ ((dateDemande == null) ? 0 : dateDemande.hashCode());
-		result = prime * result + dureeOccupationPrevue;
+		result = prime * result + duréeOccupationPrevue;
 		result = prime * result + rang;
 		return result;
 	}
@@ -70,7 +70,7 @@ public class EnAttente extends Bateau implements Serializable {
 				return false;
 		} else if (!dateDemande.equals(other.dateDemande))
 			return false;
-		if (dureeOccupationPrevue != other.dureeOccupationPrevue)
+		if (duréeOccupationPrevue != other.duréeOccupationPrevue)
 			return false;
 		if (rang != other.rang)
 			return false;

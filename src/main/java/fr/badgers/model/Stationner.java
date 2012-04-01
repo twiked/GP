@@ -27,6 +27,8 @@ public class Stationner implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date dateDebut;
 
+	private int duree;
+	
 	public Stationner() {
 		super();
 	}
@@ -47,6 +49,14 @@ public class Stationner implements Serializable {
 
 	public Date getDateDebut() {
 		return dateDebut;
+	}
+
+	public int getDuree() {
+		return duree;
+	}
+
+	public void setDuree(int duree) {
+		this.duree = duree;
 	}
 
 	@Override

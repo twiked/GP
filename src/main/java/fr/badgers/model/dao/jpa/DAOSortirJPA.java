@@ -1,10 +1,12 @@
-/*package fr.badgers.model.dao.jpa;
+package fr.badgers.model.dao.jpa;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 
+import fr.badgers.model.Modele;
 import fr.badgers.model.Sortir;
 import fr.badgers.model.SortirId;
 import fr.badgers.model.dao.DAOSortir;
@@ -26,8 +28,9 @@ public class DAOSortirJPA implements DAOSortir{
 
 	@Override
 	public List<Sortir> FindAll() {
-		// TODO Auto-generated method stub
-		return null;
+		TypedQuery<Sortir> query = entityManager.createQuery(
+				"SELECT M FROM Sortir M", Sortir.class);
+		return query.getResultList();
 	}
 
 	@Override
@@ -42,7 +45,7 @@ public class DAOSortirJPA implements DAOSortir{
 		tx.begin();
 		entityManager.persist(obj);
 		tx.commit();
-		return entityManager.find(Sortir.class, SortirId.class);
+		return entityManager.find(Sortir.class, new SortirId(obj.getResident().getIdBateau(), obj.getDateDebut()));
 	}
 
 	@Override
@@ -52,4 +55,3 @@ public class DAOSortirJPA implements DAOSortir{
 	}
 
 }
-*/

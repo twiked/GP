@@ -27,7 +27,7 @@ public class Occuper implements Serializable {
 	@ManyToOne	
 	private Emplacement emplacement;
 	
-    private int Duree;
+    private int duree;
     
 	public Occuper() {
 	}
@@ -51,11 +51,11 @@ public class Occuper implements Serializable {
 	}
 
 	public int getDuree() {
-		return Duree;
+		return duree;
 	}
 
 	public void setDuree(int duree) {
-		Duree = duree;
+		this.duree = duree;
 	}
 }
 
