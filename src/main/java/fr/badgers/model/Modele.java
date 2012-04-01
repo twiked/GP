@@ -135,14 +135,11 @@ public class Modele implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Modele [idModele="
+		return "Modele "
 				+ idModele
-				+ ", "
-				+ (serie != null ? "Série=" + serie + ", " : "")
-				+ (type != null ? "Type=" + type + ", " : "")
-				+ (constructeur != null ? "Constructeur=" + constructeur + ", "
-						: "") + "Longueur=" + longueur + ", Largeur=" + largeur
-				+ ", Tirant=" + tirant + "]";
+				+ " - "
+				+ (serie != null ? serie + " - " : "")
+				+ (type != null ? type : "");
 	}
 
 }

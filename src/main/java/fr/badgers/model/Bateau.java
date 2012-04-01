@@ -127,7 +127,7 @@ public class Bateau implements Serializable {
 
 	@Override
 	public String toString() {
-		return idBateau + " - " + nomBateau;
+		return "Bateau " + idBateau + " - " + nomBateau;
 	}   
 	
 }
