@@ -2,6 +2,7 @@ package fr.badgers.gui;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -14,6 +15,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
@@ -69,26 +71,10 @@ public class Leave extends JPanel {
 		JPanel upperPannel = new JPanel();
 
 		upperPannel
-				.setLayout(new FormLayout(new ColumnSpec[] {
-						ColumnSpec.decode("40px"), ColumnSpec.decode("90px"),
-						FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
-						ColumnSpec.decode("90px"),
-						FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
-						ColumnSpec.decode("20px"),
-						FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
-						ColumnSpec.decode("95px"),
-						FormFactory.LABEL_COMPONENT_GAP_COLSPEC,
-						ColumnSpec.decode("110px"), }, new RowSpec[] {
-						FormFactory.LINE_GAP_ROWSPEC, RowSpec.decode("20px"),
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC,
-						FormFactory.RELATED_GAP_ROWSPEC,
-						FormFactory.DEFAULT_ROWSPEC, }));
+				.setLayout(new FlowLayout(FlowLayout.LEADING));
 
 		JLabel lblProprietaire = new JLabel("Propriétaire");
-		upperPannel.add(lblProprietaire, "2, 4");
+		upperPannel.add(lblProprietaire);
 
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill comboBox_1 with proprietaires
@@ -108,7 +94,11 @@ public class Leave extends JPanel {
 			}
 		});
 		comboBox_1.setToolTipText("Propriétaire");
-		upperPannel.add(comboBox_1, "2, 2, default, default");
+		upperPannel.add(comboBox_1);
+		
+		JSeparator separ = new JSeparator(SwingConstants.VERTICAL);
+		separ.setSize(new Dimension(30, 10));
+		upperPannel.add(separ);
 
 		JLabel lblBateau = new JLabel("Bateau");
 		upperPannel.add(lblBateau, "4, 4");
