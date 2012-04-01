@@ -67,4 +67,9 @@ public class Port implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Port " + code + " - " + nom;
+	}
+
 }
