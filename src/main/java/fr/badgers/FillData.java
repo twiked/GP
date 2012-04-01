@@ -72,7 +72,7 @@ public class FillData {
 		DAOModele daomo = daof.createDAOModele();
 		
 		Modele m1 = new Modele();
-		m1.setSerie("S600");
+		m1.setSérie("S600");
 		m1.setConstructeur("Organisation of Governmental Crisis");
 		m1.setLargeur(8);
 		m1.setLongueur(20);
@@ -80,7 +80,7 @@ public class FillData {
 		m1.setType("Small Ship");
 		
 		Modele m2 = new Modele();
-		m2.setSerie("S610");
+		m2.setSérie("S610");
 		m2.setConstructeur("Organisation of Governmental Crisis");
 		m2.setLargeur(9);
 		m2.setLongueur(30);

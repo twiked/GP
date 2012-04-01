@@ -31,12 +31,12 @@ public class Modele implements Serializable {
 		this.idModele = idModele;
 	}
 
-	public String getSerie() {
+	public String getSérie() {
 		return serie;
 	}
 
-	public void setSerie(String serie) {
-		this.serie = serie;
+	public void setSérie(String série) {
+		this.serie = série;
 	}
 
 	public String getType() {
