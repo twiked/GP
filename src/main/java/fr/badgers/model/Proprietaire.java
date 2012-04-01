@@ -111,10 +111,8 @@ public class Proprietaire implements Serializable
 
 	@Override
 	public String toString() {
-		return "Proprietaire [idProprietaire=" + idProprietaire + ", "
-				+ (nom != null ? "nom=" + nom + ", " : "")
-				+ (adresse != null ? "adresse=" + adresse + ", " : "")
-				+ (telephone != null ? "telephone=" + telephone : "") + "]";
+		return idProprietaire + " - "
+				+ (nom != null ? nom:"");
 	}
 	
 	

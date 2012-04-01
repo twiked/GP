@@ -127,10 +127,7 @@ public class Bateau implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Bateau [idBateau=" + idBateau + ", "
-				+ (nomBateau != null ? "nomBateau=" + nomBateau + ", " : "")
-				+ "numeroSerie=" + numeroSerie + ", "
-				+ (assurance != null ? "assurance=" + assurance : "") + "]";
+		return idBateau + " - " + nomBateau;
 	}   
 	
 }
