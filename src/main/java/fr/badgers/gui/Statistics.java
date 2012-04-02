@@ -14,8 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
-import javax.swing.SwingConstants;
-import javax.swing.border.Border;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -205,7 +203,6 @@ public class Statistics extends JPanel {
 
 		@Override
 		public void stateChanged(ChangeEvent arg0) {
-			//TODO
 			((SpinnerDateModel) sinceSpinner.getModel()).getDate();
 		}
 		

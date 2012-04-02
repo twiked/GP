@@ -100,6 +100,20 @@ public class Affectation extends JPanel{
 		{
 			modelBoat.addItem(m);
 		}
+		modelBoat.addItem("Ajouter ...");
+		
+		modelBoat.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JComboBox box = (JComboBox) e.getSource();
+				if (box.getSelectedItem().equals("Ajouter ..."))
+				{
+					refreshModelBoat();
+					NewModelDial dialbox = new NewModelDial(null, "Nouveau Modele", false, Affectation.this.em);
+				}
+			}
+		});
 		
 		refreshPortBoat();
 		
@@ -286,6 +300,19 @@ public class Affectation extends JPanel{
 			portBoat.addItem(p);
 		}
 		portBoat.addItem("Ajouter ...");
+	}
+	
+	public void refreshModelBoat ()
+	{
+		daomodel = daof.createDAOModele();
+		modelBoat.removeAllItems();
+		models = daomodel.FindAll();
+		modelBoat.setToolTipText("Modele");
+		for (Modele m : models)
+		{
+			modelBoat.addItem(m);
+		}
+		modelBoat.addItem("Ajouter ...");
 	}
 
 }
