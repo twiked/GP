@@ -1,5 +1,7 @@
 package fr.badgers;
 
+import fr.badgers.gui.MainWindow;
+
 /**
  * Hello world!
  *
@@ -8,6 +10,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        MainWindow main = new MainWindow();
     }
 }
