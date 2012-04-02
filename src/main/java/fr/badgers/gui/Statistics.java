@@ -66,7 +66,7 @@ public class Statistics extends JPanel {
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		
-		//Owner
+		// Owner Section
 		JPanel propPanel = new JPanel();
 		propPanel.setLayout(new BorderLayout());
 		
@@ -85,7 +85,7 @@ public class Statistics extends JPanel {
 		propPanel.add(new JLabel("Propriétaire"),BorderLayout.NORTH);
 		propPanel.add(ownerContentPanel, BorderLayout.CENTER);
 		
-		//Boat
+		// Boat Section
 		JPanel boatPanel = new JPanel();
 		boatPanel.setLayout(new BorderLayout());
 		JComboBox boatComboBox = new JComboBox();
@@ -103,7 +103,7 @@ public class Statistics extends JPanel {
 		boatPanel.add(new JLabel("Bateau"), BorderLayout.NORTH);
 		boatPanel.add(boatContentPanel, BorderLayout.CENTER);
 		
-		//Model
+		// Model Section
 		JPanel modelPanel = new JPanel();
 		modelPanel.setLayout(new BorderLayout());
 		JComboBox modelComboBox = new JComboBox();
@@ -122,7 +122,7 @@ public class Statistics extends JPanel {
 		modelPanel.add(modelContentPanel, BorderLayout.CENTER);
 		
 		
-		//Pool
+		// Pool Section
 		JPanel bassinPanel = new JPanel();
 		bassinPanel.setLayout(new BorderLayout());
 		
