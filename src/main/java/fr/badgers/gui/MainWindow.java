@@ -4,8 +4,12 @@ import javax.persistence.EntityManager;
 import javax.swing.JFrame;
 import fr.badgers.Translator;
 
-public class MainWindow {
+public class MainWindow extends JFrame{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	private EntityManager em;
 
@@ -21,14 +25,14 @@ public class MainWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		//We don't make use of it yet, it should be static to this class or App class
+		//We don't use it yet, btw it should be static to this class or App class
 		Translator t = new Translator("fr_FR");
-		frame = new JFrame(t.translate("MainWindow.title"));
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setTitle(t.translate("MainWindow.title"));
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MainPanel mainpanel = new MainPanel(em);
-		frame.getContentPane().add(mainpanel);
-		frame.pack();
-		frame.setVisible(true);
-		frame.setMinimumSize(frame.getSize());
+		this.getContentPane().add(mainpanel);
+		this.pack();
+		this.setVisible(true);
+		this.setMinimumSize(this.getSize());
 	}
 }
