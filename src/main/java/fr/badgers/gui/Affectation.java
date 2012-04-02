@@ -27,11 +27,12 @@ import fr.badgers.model.dao.DAOPort;
 import fr.badgers.model.dao.DAOProprietaire;
 import fr.badgers.model.dao.jpa.DAOFactoryJPA;
 
-public class Affectation extends JPanel{
+public class Affectation extends JPanel {
 	private static final long serialVersionUID = 1L;
-	
+
 	private EntityManager em;
-	
+
+	// fields are set here, we want to be able to use them everywhere
 	JTextField idBoat = new JTextField(2);
 	JTextField nameBoat = new JTextField(8);
 	JTextField numBoat = new JTextField(6);
@@ -39,19 +40,19 @@ public class Affectation extends JPanel{
 	JComboBox modelBoat = new JComboBox();
 	JComboBox portBoat = new JComboBox();
 	JComboBox ownBoat = new JComboBox();
-	
+
 	JTextField idOwner = new JTextField(2);
 	JTextField nameOwner = new JTextField(8);
 	JTextField addressOwner = new JTextField(20);
 	JTextField phoneOwner = new JTextField(10);
-	
+
 	DAOFactoryJPA daof = null;
-	
+
 	DAOProprietaire daoowner = null;
 	DAOBateau daoboat = null;
 	DAOModele daomodel = null;
 	DAOPort daoport = null;
-	
+
 	// All owners
 	private List<Proprietaire> proprietaires = null;
 	// All boats
@@ -61,78 +62,80 @@ public class Affectation extends JPanel{
 	// All models
 	private List<Modele> models = null;
 
-	public Affectation(EntityManager em)  {
+	public Affectation(EntityManager em) {
 		super();
 		this.em = em;
-		
+
 		daof = new DAOFactoryJPA(em);
-		
+
 		daoowner = daof.createDAOProprietaire();
 		daoboat = daof.createDAOBateau();
 		daomodel = daof.createDAOModele();
-		
+
 		this.refreshOwnBoat();
 		// All models
 		models = daomodel.FindAll();
-		// All
-		
+
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-		
+
 		JPanel boatPanel = new JPanel();
 		boatPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
 		boatPanel.add(new JLabel("Bateau"));
-		
+
 		// boat name
 		nameBoat.setToolTipText("Nom Bateau");
 		nameBoat.setText("Nom");
-		
+
 		// serial number
 		numBoat.setToolTipText("Numero Bateau");
 		numBoat.setText("Numéro");
-		
+
 		// boat insurance
 		insuBoat.setToolTipText("Assurance Bateau");
 		insuBoat.setText("Assurance");
-		
+
 		// boat model -- list with the currently available models
 		modelBoat.setToolTipText("Modele Bateau");
-		for (Modele m : models)
-		{
+		for (Modele m : models) {
 			modelBoat.addItem(m);
 		}
+		// to let the user add new models we add this one
 		modelBoat.addItem("Ajouter ...");
-		
+
 		modelBoat.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JComboBox box = (JComboBox) e.getSource();
-				if (box.getSelectedItem().equals("Ajouter ..."))
-				{
+				if (box.getSelectedItem().equals("Ajouter ...")) {
+					// we refresh the list
 					refreshModelBoat();
-					NewModelDial dialbox = new NewModelDial(null, "Nouveau Modele", false, Affectation.this.em);
+					// and we start the new window to make a new model
+					NewModelDial dialbox = new NewModelDial(null,
+							"Nouveau Modele", false, Affectation.this.em);
 				}
 			}
 		});
-		
+
 		refreshPortBoat();
-		
+
 		// boat port -- list with the currently known ports
-		
+
 		portBoat.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JComboBox box = (JComboBox) e.getSource();
-				if (box.getSelectedItem().equals("Ajouter ..."))
-				{
+				if (box.getSelectedItem().equals("Ajouter ...")) {
+					// we refresh the list
 					refreshPortBoat();
-					NewPortDial dialbox = new NewPortDial(null, "Nouveau Port", false, Affectation.this.em);
+					// and we start the new window to make a new port
+					NewPortDial dialbox = new NewPortDial(null, "Nouveau Port",
+							false, Affectation.this.em);
 				}
 			}
 		});
-		
-		
+
 		boatPanel.add(idBoat);
 		boatPanel.add(nameBoat);
 		boatPanel.add(numBoat);
@@ -140,31 +143,32 @@ public class Affectation extends JPanel{
 		boatPanel.add(modelBoat);
 		boatPanel.add(portBoat);
 		boatPanel.add(ownBoat);
-		
+
 		JButton acceptButtonBoat = new JButton("Ajouter");
 		acceptButtonBoat.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Bateau boat = null;
-					if (idBoat.getText().equals("") || idBoat.getText().equals("Id"))
-					{
+					if (idBoat.getText().equals("")
+							|| idBoat.getText().equals("Id")) {
 						// New boat with automaticaly generated Id
 						boat = new Bateau();
-						JOptionPane.showMessageDialog(null, "L'id du bateau n'a pas été déterminé, il sera généré automatiquement", "Information", JOptionPane.INFORMATION_MESSAGE);
-					}
-					else if (Integer.parseInt(idBoat.getText()) > 0)
-					{
-						if (daoboat.getById(Integer.parseInt(idBoat.getText())) == null)
-						{
-							boat = new Bateau(Integer.parseInt(idBoat.getText()));
-						}
-						else
-						{
+						// user put no Id or let the first one, we will generate a random one for him
+						JOptionPane
+								.showMessageDialog(
+										null,
+										"L'id du bateau n'a pas été déterminé, il sera généré automatiquement",
+										"Information",
+										JOptionPane.INFORMATION_MESSAGE);
+					} else if (Integer.parseInt(idBoat.getText()) > 0) {
+						if (daoboat.getById(Integer.parseInt(idBoat.getText())) == null) {
+							boat = new Bateau(
+									Integer.parseInt(idBoat.getText()));
+						} else {
 							throw (new AlreadyExistingIdException());
 						}
-					}
-					else
+					} else
 						throw (new NumberFormatException());
 					// Filling the rest of the informations
 					boat.setNomBateau(nameBoat.getText());
@@ -172,81 +176,92 @@ public class Affectation extends JPanel{
 					boat.setNumeroSerie(numBoat.getText());
 					boat.setModele((Modele) modelBoat.getSelectedItem());
 					boat.setPortOrigine((Port) portBoat.getSelectedItem());
-					boat.setProprietaire((Proprietaire) ownBoat.getSelectedItem());
+					boat.setProprietaire((Proprietaire) ownBoat
+							.getSelectedItem());
 					daoboat.insert(boat);
-					
+
 				} catch (NumberFormatException e1) {
-					JOptionPane.showMessageDialog(null, "Vous devez entrer un entier pour l'id ou laisser la case vide pour un id automatique, " +
-							"le numéro de série du bateau doit être un entier", "Erreur d'id", JOptionPane.ERROR_MESSAGE);
-				}
-				catch (NullPointerException e2) {
-					JOptionPane.showMessageDialog(null, "Vous devez entrer un nom de bateau et une assurance valide", "Erreur de nom", JOptionPane.ERROR_MESSAGE);
-				}
-				catch (AlreadyExistingIdException e3) {
-					JOptionPane.showMessageDialog(null, "L'id indiqué existe déjà, vous devez choisir un identifiant unique", "Erreur d'id", JOptionPane.ERROR_MESSAGE);
+					JOptionPane
+							.showMessageDialog(
+									null,
+									"Vous devez entrer un entier pour l'id ou laisser la case vide pour un id automatique, "
+											+ "le numéro de série du bateau doit être un entier",
+									"Erreur d'id", JOptionPane.ERROR_MESSAGE);
+				} catch (NullPointerException e2) {
+					JOptionPane
+							.showMessageDialog(
+									null,
+									"Vous devez entrer un nom de bateau et une assurance valide",
+									"Erreur de nom", JOptionPane.ERROR_MESSAGE);
+				} catch (AlreadyExistingIdException e3) {
+					JOptionPane
+							.showMessageDialog(
+									null,
+									"L'id indiqué existe déjà, vous devez choisir un identifiant unique",
+									"Erreur d'id", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
-		
+
 		boatPanel.add(acceptButtonBoat);
 		this.add(boatPanel);
-		
+
 		/*
 		 * Owner adding section
 		 */
-	
+
 		JSeparator separ1 = new JSeparator(SwingConstants.HORIZONTAL);
 		this.add(separ1);
-		
+
 		JPanel ownerPanel = new JPanel();
 		ownerPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
 		ownerPanel.add(new JLabel("Propriétaire"));
-		
+
 		// owner name
 		idOwner.setToolTipText("Identifiant");
 		idOwner.setText("Id");
-		
+
 		// owner name
 		nameOwner.setToolTipText("Nom");
 		nameOwner.setText("Nom");
-		
+
 		// owner's address
 		addressOwner.setToolTipText("Adresse du propriétaire");
 		addressOwner.setText("Adresse");
-		
+
 		// phone number
 		phoneOwner.setToolTipText("N° Téléphone");
 		phoneOwner.setText("Téléphone");
-		
+
 		ownerPanel.add(idOwner);
 		ownerPanel.add(nameOwner);
 		ownerPanel.add(addressOwner);
 		ownerPanel.add(phoneOwner);
-		
+
 		JButton acceptButtonOwner = new JButton("Ajouter");
 		acceptButtonOwner.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Proprietaire owner = null;
-					if (idOwner.getText().equals("") || idOwner.getText().equals("Id"))
-					{
+					if (idOwner.getText().equals("")
+							|| idOwner.getText().equals("Id")) {
 						// New boat with automaticaly generated Id
 						owner = new Proprietaire();
-						JOptionPane.showMessageDialog(null, "L'identifiant n'a pas été déterminé, il sera généré automatiquement", "Information", JOptionPane.INFORMATION_MESSAGE);
-					}
-					else if (Integer.parseInt(idOwner.getText()) > 0)
-					{
-						if (daoowner.getById(Integer.parseInt(idOwner.getText())) == null)
-						{
-							owner = new Proprietaire(Integer.parseInt(idOwner.getText()));
-						}
-						else
-						{
+						JOptionPane
+								.showMessageDialog(
+										null,
+										"L'identifiant n'a pas été déterminé, il sera généré automatiquement",
+										"Information",
+										JOptionPane.INFORMATION_MESSAGE);
+					} else if (Integer.parseInt(idOwner.getText()) > 0) {
+						if (daoowner.getById(Integer.parseInt(idOwner.getText())) == null) {
+							owner = new Proprietaire(Integer.parseInt(idOwner
+									.getText()));
+						} else {
 							throw (new AlreadyExistingIdException());
 						}
-					}
-					else
+					} else
 						throw (new NumberFormatException());
 					// Filling the rest of the informations
 					owner.setNom(nameOwner.getText());
@@ -254,64 +269,74 @@ public class Affectation extends JPanel{
 					owner.setTelephone(numBoat.getText());
 					daoowner.insert(owner);
 					refreshOwnBoat();
-					
+
 				} catch (NumberFormatException e1) {
-					JOptionPane.showMessageDialog(null, "Vous devez entrer un entier pour l'id ou laisser la case vide pour un id automatique", "Erreur d'identifiant", JOptionPane.ERROR_MESSAGE);
-				}
-				catch (NullPointerException e2) {
-					JOptionPane.showMessageDialog(null, "Vous devez entrer un nom, un telephone et une adresse valide", "Erreur de nom", JOptionPane.ERROR_MESSAGE);
-				}
-				catch (AlreadyExistingIdException e3) {
-					JOptionPane.showMessageDialog(null, "L'id indiqué existe déjà, vous devez choisir un identifiant unique", "Erreur d'id", JOptionPane.ERROR_MESSAGE);
+					JOptionPane
+							.showMessageDialog(
+									null,
+									"Vous devez entrer un entier pour l'id ou laisser la case vide pour un id automatique",
+									"Erreur d'identifiant",
+									JOptionPane.ERROR_MESSAGE);
+				} catch (NullPointerException e2) {
+					JOptionPane
+							.showMessageDialog(
+									null,
+									"Vous devez entrer un nom, un telephone et une adresse valide",
+									"Erreur de nom", JOptionPane.ERROR_MESSAGE);
+				} catch (AlreadyExistingIdException e3) {
+					JOptionPane
+							.showMessageDialog(
+									null,
+									"L'id indiqué existe déjà, vous devez choisir un identifiant unique",
+									"Erreur d'id", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
-		
+
 		ownerPanel.add(acceptButtonOwner);
 		this.add(ownerPanel);
-		
+
 		JSeparator separ2 = new JSeparator(SwingConstants.HORIZONTAL);
 		this.add(separ2);
 	}
-	
-	public void refreshOwnBoat ()
-	{
+
+	public void refreshOwnBoat() {
 		daoowner = daof.createDAOProprietaire();
+		// first we clear all that was inside before
 		ownBoat.removeAll();
 		proprietaires = daoowner.FindAll();
-		// boat owner -- list with all the currently known owners
 		ownBoat.setToolTipText("Proprietaire");
-		for (Proprietaire p : proprietaires)
-		{
+		// then we add all the owners
+		for (Proprietaire p : proprietaires) {
 			ownBoat.addItem(p);
 		}
 	}
-	
-	public void refreshPortBoat ()
-	{
+
+	public void refreshPortBoat() {
 		daoport = daof.createDAOPort();
-		// portBoat.removeAll();
+		// first we clear all that was inside before
 		portBoat.removeAllItems();
 		ports = daoport.FindAll();
-		// boat owner -- list with all the currently known owners
 		portBoat.setToolTipText("Port");
-		for (Port p : ports)
-		{
+		// then we add all the ports
+		for (Port p : ports) {
 			portBoat.addItem(p);
 		}
+		// this one is for adding new ports
 		portBoat.addItem("Ajouter ...");
 	}
-	
-	public void refreshModelBoat ()
-	{
+
+	public void refreshModelBoat() {
 		daomodel = daof.createDAOModele();
+		// first we clear all that was inside before
 		modelBoat.removeAllItems();
 		models = daomodel.FindAll();
 		modelBoat.setToolTipText("Modele");
-		for (Modele m : models)
-		{
+		// then we add all the models
+		for (Modele m : models) {
 			modelBoat.addItem(m);
 		}
+		// this one is for adding new ports
 		modelBoat.addItem("Ajouter ...");
 	}
 

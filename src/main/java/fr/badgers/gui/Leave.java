@@ -73,6 +73,7 @@ public class Leave extends JPanel {
 		JComboBox comboBox_1 = new JComboBox();
 		// We fill comboBox_1 with proprietaires
 		currentProp = null;
+		// we put an empty one at first
 		comboBox_1.addItem("");
 		for (Proprietaire p : proprietaires) {
 			comboBox_1.addItem(p);
@@ -90,16 +91,19 @@ public class Leave extends JPanel {
 		comboBox_1.setToolTipText("Propriétaire");
 		upperPannel.add(comboBox_1);
 		
+		// we give some space
 		JSeparator separ = new JSeparator(SwingConstants.VERTICAL);
 		separ.setSize(new Dimension(30, 10));
 		upperPannel.add(separ);
 
+		// starting the boats here
 		JLabel lblBateau = new JLabel("Bateau");
-		upperPannel.add(lblBateau, "4, 4");
+		upperPannel.add(lblBateau);
 
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.addItem("");
 		comboBox_2.setToolTipText("Bateau");
+		// we fill the box with the boats
 		for (Bateau b : bateaux) {
 			comboBox_2.addItem(b);
 		}
@@ -113,19 +117,19 @@ public class Leave extends JPanel {
 				}
 			}
 		});
-		upperPannel.add(comboBox_2, "4, 2, left, top");
+		upperPannel.add(comboBox_2);
 
 		JLabel lblDateDepart = new JLabel("Date depart");
-		upperPannel.add(lblDateDepart, "8, 4");
+		upperPannel.add(lblDateDepart);
 
 		spinner = new JSpinner(new SpinnerDateModel());
-		upperPannel.add(spinner, "10, 4, left, top");
+		upperPannel.add(spinner);
 
 		JLabel lblDateRetourPrevu = new JLabel("Date retour");
-		upperPannel.add(lblDateRetourPrevu, "8, 6, left, center");
+		upperPannel.add(lblDateRetourPrevu);
 
 		JSpinner spinner_1 = new JSpinner(new SpinnerDateModel());
-		upperPannel.add(spinner_1, "10, 6");
+		upperPannel.add(spinner_1);
 
 		JSeparator splitPane_1 = new JSeparator(SwingConstants.HORIZONTAL);
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
