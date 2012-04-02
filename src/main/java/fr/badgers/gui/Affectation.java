@@ -1,10 +1,8 @@
 package fr.badgers.gui;
 
-import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.security.spec.MGF1ParameterSpec;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -72,11 +70,8 @@ public class Affectation extends JPanel{
 		daoowner = daof.createDAOProprietaire();
 		daoboat = daof.createDAOBateau();
 		daomodel = daof.createDAOModele();
-		daoport = daof.createDAOPort();
 		
 		this.refreshOwnBoat();
-		// All ports
-		ports = daoport.FindAll();
 		// All models
 		models = daomodel.FindAll();
 		// All
@@ -86,9 +81,6 @@ public class Affectation extends JPanel{
 		JPanel boatPanel = new JPanel();
 		boatPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
 		boatPanel.add(new JLabel("Bateau"));
-		
-		
-		
 		
 		// boat name
 		nameBoat.setToolTipText("Nom Bateau");
@@ -109,13 +101,22 @@ public class Affectation extends JPanel{
 			modelBoat.addItem(m);
 		}
 		
-		// boat port -- list with the currently known ports
-		portBoat.setToolTipText("Port Bateau");
-		for (Port p : ports)
-		{
-			portBoat.addItem(p);
-		}
+		refreshPortBoat();
 		
+		// boat port -- list with the currently known ports
+		
+		portBoat.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JComboBox box = (JComboBox) e.getSource();
+				if (box.getSelectedItem().equals("Ajouter ..."))
+				{
+					refreshPortBoat();
+					NewPortDial dialbox = new NewPortDial(null, "Nouveau Port", false, Affectation.this.em);
+				}
+			}
+		});
 		
 		
 		boatPanel.add(idBoat);
@@ -180,8 +181,8 @@ public class Affectation extends JPanel{
 		 * Owner adding section
 		 */
 	
-		JSeparator separ2 = new JSeparator(SwingConstants.HORIZONTAL);
-		this.add(separ2);
+		JSeparator separ1 = new JSeparator(SwingConstants.HORIZONTAL);
+		this.add(separ1);
 		
 		JPanel ownerPanel = new JPanel();
 		ownerPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
@@ -254,6 +255,9 @@ public class Affectation extends JPanel{
 		
 		ownerPanel.add(acceptButtonOwner);
 		this.add(ownerPanel);
+		
+		JSeparator separ2 = new JSeparator(SwingConstants.HORIZONTAL);
+		this.add(separ2);
 	}
 	
 	public void refreshOwnBoat ()
@@ -267,6 +271,21 @@ public class Affectation extends JPanel{
 		{
 			ownBoat.addItem(p);
 		}
+	}
+	
+	public void refreshPortBoat ()
+	{
+		daoport = daof.createDAOPort();
+		// portBoat.removeAll();
+		portBoat.removeAllItems();
+		ports = daoport.FindAll();
+		// boat owner -- list with all the currently known owners
+		portBoat.setToolTipText("Port");
+		for (Port p : ports)
+		{
+			portBoat.addItem(p);
+		}
+		portBoat.addItem("Ajouter ...");
 	}
 
 }

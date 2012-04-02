@@ -53,7 +53,7 @@ public class DAOPortJPA implements DAOPort {
 		}
 	}
 
-	public Port getById(Integer id) {
+	public Port getById(String id) {
 		return entityManager.find(Port.class, id);
 	}
 
