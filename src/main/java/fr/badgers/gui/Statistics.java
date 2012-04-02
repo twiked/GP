@@ -72,7 +72,7 @@ public class Statistics extends JPanel {
 		JPanel propPanel = new JPanel();
 		propPanel.setLayout(new BorderLayout());
 		
-		propDisplay = new JLabel();
+		propDisplay = new JLabel("Nombre de Bateaux : N/A");
 		JComboBox propComboBox = new JComboBox();
 		propComboBox.addItem("Propriétaire");
 		for (Proprietaire p : props)
@@ -92,7 +92,7 @@ public class Statistics extends JPanel {
 		boatPanel.setLayout(new BorderLayout());
 		JComboBox boatComboBox = new JComboBox();
 		boatComboBox.addItem("Bateau");
-		boatDisplay = new JLabel();
+		boatDisplay = new JLabel("Nombre de sorties : N/A");
 		for(Bateau b : boats)
 			boatComboBox.addItem(b);
 		boatComboBox.addActionListener(new boatActionListener());
@@ -110,7 +110,7 @@ public class Statistics extends JPanel {
 		modelPanel.setLayout(new BorderLayout());
 		JComboBox modelComboBox = new JComboBox();
 		modelComboBox.addItem("Modèle");
-		modelDisplay = new JLabel("N/A", 4);
+		modelDisplay = new JLabel("Nombre de bateaux : N/A", 4);
 		for(Modele m : models)
 			modelComboBox.addItem(m);
 		modelComboBox.addActionListener(new modelActionListener());
@@ -121,6 +121,7 @@ public class Statistics extends JPanel {
 		modelContentPanel.add(modelDisplay);
 		
 		modelPanel.add(new JLabel("Modèle"), BorderLayout.NORTH);
+		modelPanel.add(modelContentPanel, BorderLayout.CENTER);
 		
 		
 		//Pool
@@ -129,11 +130,13 @@ public class Statistics extends JPanel {
 		
 		poolDisplay = new JLabel("N/A");
 		sinceSpinner = new JSpinner(new SpinnerDateModel());
+		sinceSpinner.setEditor(new JSpinner.DateEditor(sinceSpinner, "d/M/y"));
+		((JSpinner.DefaultEditor)sinceSpinner.getEditor()).getTextField().setColumns(5);
 		
 		JPanel poolContentPanel = new JPanel();
 		poolContentPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
 		
-		poolContentPanel.add(new JLabel("Nombre de sorties depuis"));
+		poolContentPanel.add(new JLabel("Nombre de sorties depuis le"));
 		poolContentPanel.add(sinceSpinner);
 		poolContentPanel.add(poolDisplay);
 		
@@ -156,11 +159,11 @@ public class Statistics extends JPanel {
 		public void actionPerformed(ActionEvent arg0) {
 			JComboBox jc = (JComboBox) arg0.getSource();
 			if(jc.getSelectedIndex() != 0) {
-				propDisplay.setText("Nombre de Bateaux :" + String.valueOf(((Proprietaire) (jc.getSelectedItem()))
+				propDisplay.setText("Nombre de Bateaux : " + String.valueOf(((Proprietaire) (jc.getSelectedItem()))
 						.getBateaux().size()));
 			}
 			else
-				propDisplay.setText("N/A");
+				propDisplay.setText("Nombre de Bateaux : N/A");
 		}
 	}
 	private class boatActionListener implements ActionListener {
@@ -174,10 +177,10 @@ public class Statistics extends JPanel {
 				for (Sortir s : sorties)
 					if (s.getResident().equals(b))
 							count += 1;
-				boatDisplay.setText("Nombre de sorties :" + String.valueOf(count));
+				boatDisplay.setText("Nombre de sorties : " + String.valueOf(count));
 			}
 			else
-				boatDisplay.setText("N/A");
+				boatDisplay.setText("Nombre de sorties : N/A");
 		}
 	}
 	private class modelActionListener implements ActionListener {
@@ -191,10 +194,10 @@ public class Statistics extends JPanel {
 					if(b.getModele().equals((Modele) jc.getSelectedItem()))
 						count++;
 				}
-				modelDisplay.setText("Nombre de bateaux :" + String.valueOf(count));
+				modelDisplay.setText("Nombre de bateaux : " + String.valueOf(count));
 			}
 			else
-				modelDisplay.setText("");
+				modelDisplay.setText("Nombre de bateaux : N/A");
 		}
 	}
 	

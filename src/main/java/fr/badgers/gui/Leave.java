@@ -147,9 +147,6 @@ public class Leave extends JPanel {
 
 		JPanel lowerPanel = new JPanel();
 
-		JLabel label = new JLabel("Retour");
-		lowerPanel.add(label);
-
 		JButton btnConfirmEntre = new JButton("Confirmer retour");
 		lowerPanel.add(btnConfirmEntre);
 		btnConfirmEntre.addMouseListener(new MouseAdapter() {
@@ -170,8 +167,6 @@ public class Leave extends JPanel {
 		JButton btnConfirmSortie = new JButton("Confirmer sortie");
 		lowerPanel.add(btnConfirmSortie);
 
-		JLabel lblSortie = new JLabel("Sortie");
-		lowerPanel.add(lblSortie);
 		btnConfirmSortie.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

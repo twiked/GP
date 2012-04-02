@@ -20,35 +20,13 @@ import fr.badgers.model.dao.jpa.DAOFactoryJPA;
 public class MainWindow {
 
 	private JFrame frame;
-
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
-	EntityManager em = emf.createEntityManager();
-
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EntityManagerFactory emf = Persistence
-							.createEntityManagerFactory("GP");
-					EntityManager em = emf.createEntityManager();
-
-					MainWindow window = new MainWindow();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private EntityManager em;
 
 	/**
 	 * Create the application.
 	 */
-	public MainWindow() {
+	public MainWindow(EntityManager em) {
+		this.em = em;
 		initialize();
 	}
 
@@ -59,10 +37,11 @@ public class MainWindow {
 		//We don't make use of it yet, it should be static to this class or App class
 		Translator t = new Translator("fr_FR");
 		frame = new JFrame(t.translate("MainWindow.title"));
-		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MainPanel mainpanel = new MainPanel(em);
 		frame.getContentPane().add(mainpanel);
 		frame.pack();
+		frame.setVisible(true);
+		frame.setMinimumSize(frame.getSize());
 	}
 }
