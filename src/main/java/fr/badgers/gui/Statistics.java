@@ -1,5 +1,6 @@
 package fr.badgers.gui;
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
+import javax.swing.SwingConstants;
+import javax.swing.border.Border;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -33,7 +36,7 @@ public class Statistics extends JPanel {
 	private JLabel boatDisplay;
 	private JLabel modelDisplay;
 	private JLabel poolDisplay;
-	private JSpinner since;
+	private JSpinner sinceSpinner;
 	
 	DAOProprietaireJPA daop;
 	List<Proprietaire> props;
@@ -67,57 +70,78 @@ public class Statistics extends JPanel {
 		
 		//Owner
 		JPanel propPanel = new JPanel();
-		propPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
-		propPanel.add(new JLabel("Propriétaire"));
-		propDisplay = new JLabel();
+		propPanel.setLayout(new BorderLayout());
+		
+		propDisplay = new JLabel("Nombre de Bateaux : N/A");
 		JComboBox propComboBox = new JComboBox();
 		propComboBox.addItem("Propriétaire");
 		for (Proprietaire p : props)
 			propComboBox.addItem(p);
 		propComboBox.addActionListener(new propActionListener());
+
+		JPanel ownerContentPanel = new JPanel();
+		ownerContentPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+		ownerContentPanel.add(propComboBox);
+		ownerContentPanel.add(propDisplay);
 		
-		propPanel.add(propComboBox);
-		propPanel.add(propDisplay);
+		propPanel.add(new JLabel("Propriétaire"),BorderLayout.NORTH);
+		propPanel.add(ownerContentPanel, BorderLayout.CENTER);
 		
 		//Boat
 		JPanel boatPanel = new JPanel();
-		boatPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+		boatPanel.setLayout(new BorderLayout());
 		JComboBox boatComboBox = new JComboBox();
 		boatComboBox.addItem("Bateau");
-		boatDisplay = new JLabel();
+		boatDisplay = new JLabel("Nombre de sorties : N/A");
 		for(Bateau b : boats)
 			boatComboBox.addItem(b);
 		boatComboBox.addActionListener(new boatActionListener());
-		boatPanel.add(new JLabel("Bateau"));
 		
-		boatPanel.add(boatComboBox);
-		boatPanel.add(boatDisplay);
+		JPanel boatContentPanel = new JPanel();
+		boatContentPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+		boatContentPanel.add(boatComboBox);
+		boatContentPanel.add(boatDisplay);
 		
+		boatPanel.add(new JLabel("Bateau"), BorderLayout.NORTH);
+		boatPanel.add(boatContentPanel, BorderLayout.CENTER);
 		
 		//Model
 		JPanel modelPanel = new JPanel();
-		modelPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+		modelPanel.setLayout(new BorderLayout());
 		JComboBox modelComboBox = new JComboBox();
 		modelComboBox.addItem("Modèle");
-		modelDisplay = new JLabel("N/A", 4);
+		modelDisplay = new JLabel("Nombre de bateaux : N/A", 4);
 		for(Modele m : models)
 			modelComboBox.addItem(m);
 		modelComboBox.addActionListener(new modelActionListener());
-				
-		modelPanel.add(modelComboBox);
-		modelPanel.add(modelDisplay);
+		
+		JPanel modelContentPanel = new JPanel();
+		modelContentPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+		modelContentPanel.add(modelComboBox);
+		modelContentPanel.add(modelDisplay);
+		
+		modelPanel.add(new JLabel("Modèle"), BorderLayout.NORTH);
+		modelPanel.add(modelContentPanel, BorderLayout.CENTER);
+		
 		
 		//Pool
 		JPanel bassinPanel = new JPanel();
-		bassinPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+		bassinPanel.setLayout(new BorderLayout());
 		
 		poolDisplay = new JLabel("N/A");
+		sinceSpinner = new JSpinner(new SpinnerDateModel());
+		sinceSpinner.setEditor(new JSpinner.DateEditor(sinceSpinner, "d/M/y"));
+		((JSpinner.DefaultEditor)sinceSpinner.getEditor()).getTextField().setColumns(5);
 		
-		bassinPanel.add(new JLabel("Bassin"));
-		bassinPanel.add(new JLabel("Nombre de sorties depuis"));
-		since = new JSpinner(new SpinnerDateModel());
-		bassinPanel.add(since);
-		bassinPanel.add(poolDisplay);
+		JPanel poolContentPanel = new JPanel();
+		poolContentPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+		
+		poolContentPanel.add(new JLabel("Nombre de sorties depuis le"));
+		poolContentPanel.add(sinceSpinner);
+		poolContentPanel.add(poolDisplay);
+		
+		bassinPanel.add(new JLabel("Bassin"), BorderLayout.NORTH);
+		bassinPanel.add(poolContentPanel, BorderLayout.CENTER);
 
 		// Adding widgets to the main panel
 		this.add(propPanel);
@@ -135,11 +159,11 @@ public class Statistics extends JPanel {
 		public void actionPerformed(ActionEvent arg0) {
 			JComboBox jc = (JComboBox) arg0.getSource();
 			if(jc.getSelectedIndex() != 0) {
-				propDisplay.setText(String.valueOf(((Proprietaire) (jc.getSelectedItem()))
+				propDisplay.setText("Nombre de Bateaux : " + String.valueOf(((Proprietaire) (jc.getSelectedItem()))
 						.getBateaux().size()));
 			}
 			else
-				propDisplay.setText("N/A");
+				propDisplay.setText("Nombre de Bateaux : N/A");
 		}
 	}
 	private class boatActionListener implements ActionListener {
@@ -153,10 +177,10 @@ public class Statistics extends JPanel {
 				for (Sortir s : sorties)
 					if (s.getResident().equals(b))
 							count += 1;
-				boatDisplay.setText(String.valueOf(count));
+				boatDisplay.setText("Nombre de sorties : " + String.valueOf(count));
 			}
 			else
-				boatDisplay.setText("N/A");
+				boatDisplay.setText("Nombre de sorties : N/A");
 		}
 	}
 	private class modelActionListener implements ActionListener {
@@ -170,10 +194,10 @@ public class Statistics extends JPanel {
 					if(b.getModele().equals((Modele) jc.getSelectedItem()))
 						count++;
 				}
-				modelDisplay.setText(String.valueOf(count));
+				modelDisplay.setText("Nombre de bateaux : " + String.valueOf(count));
 			}
 			else
-				modelDisplay.setText("N/A");
+				modelDisplay.setText("Nombre de bateaux : N/A");
 		}
 	}
 	
@@ -182,7 +206,7 @@ public class Statistics extends JPanel {
 		@Override
 		public void stateChanged(ChangeEvent arg0) {
 			//TODO
-			((SpinnerDateModel) since.getModel()).getDate();
+			((SpinnerDateModel) sinceSpinner.getModel()).getDate();
 		}
 		
 	}

@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 
+import fr.badgers.Translator;
 import fr.badgers.model.Bateau;
 import fr.badgers.model.Proprietaire;
 import fr.badgers.model.dao.DAOBateau;
@@ -19,35 +20,13 @@ import fr.badgers.model.dao.jpa.DAOFactoryJPA;
 public class MainWindow {
 
 	private JFrame frame;
-
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("GP");
-	EntityManager em = emf.createEntityManager();
-
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EntityManagerFactory emf = Persistence
-							.createEntityManagerFactory("GP");
-					EntityManager em = emf.createEntityManager();
-
-					MainWindow window = new MainWindow();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private EntityManager em;
 
 	/**
 	 * Create the application.
 	 */
-	public MainWindow() {
+	public MainWindow(EntityManager em) {
+		this.em = em;
 		initialize();
 	}
 
@@ -55,32 +34,14 @@ public class MainWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		//We don't make use of it yet, it should be static to this class or App class
+		Translator t = new Translator("fr_FR");
+		frame = new JFrame(t.translate("MainWindow.title"));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		MainPanel mainpanel = new MainPanel();
+		MainPanel mainpanel = new MainPanel(em);
 		frame.getContentPane().add(mainpanel);
-
-		/*
-		 * Affectation tab
-		 */
-
-		JPanel panel_1 = new Affectation(em);
-		mainpanel.addTab("Affectation", null, panel_1, null);
-
-		/*
-		 * Statistiques tab
-		 */
-
-		JPanel stat_tab = new Statistics(em);
-		mainpanel.addTab("Statistiques", null, stat_tab, null);
-
-		/*
-		 * Sorties tab
-		 */
-
-		JPanel panel = new Leave(em);
-		panel.setToolTipText("");
-		mainpanel.addTab("Sorties", null, panel, null);
+		frame.pack();
+		frame.setVisible(true);
+		frame.setMinimumSize(frame.getSize());
 	}
 }
